@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<types svn="$Id: types.xml 62 2009-06-02 06:33:49Z rick $" revision="$Revision: 62 $">
+	<type id="0x00AE6C67">
+		<category>model</category>
+		<fourcc>BONE</fourcc>
+		<extension>skcon</extension>
+		<directory>skcon</directory>
+		<description>Skin Controller</description>
+	</type>
+	
+	<type id="0x00B2D882">
+		<category>material</category>
+		<fourcc>_IMG</fourcc>
+		<extension>dds</extension>
+		<directory>dds</directory>
+		<description>DDS Texture</description>
+	</type>
+	
+	<type id="0x00B552EA">
+		<category>other</category>
+		<fourcc>_SPT</fourcc>
+		<extension>tree</extension>
+		<directory>tree</directory>
+		<description />
+	</type>
+	
+	<type id="0x010077BB">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>mp3</extension>
+		<directory>mp3</directory>
+		<description />
+	</type>
+	
+	<type id="0x010077C4">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>wav</extension>
+		<directory>wav</directory>
+		<description>Waveform Audio</description>
+	</type>
+	
+	<type id="0x010077CA">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>xa</extension>
+		<directory>xa</directory>
+		<description />
+	</type>
+	
+	<type id="0x015A1849">
+		<category>model</category>
+		<fourcc>GEOM</fourcc>
+		<extension>simgeom</extension>
+		<directory>simgeom</directory>
+		<description />
+	</type>
+	
+	<type id="0x0166038C">
+		<category>other</category>
+		<fourcc>_KEY</fourcc>
+		<extension>keyname</extension>
+		<directory>keyname</directory>
+		<description />
+	</type>
+	
+	<type id="0x01661233">
+		<category>model</category>
+		<fourcc>MODL</fourcc>
+		<extension>model</extension>
+		<directory>model</directory>
+		<description />
+	</type>
+	
+	<type id="0x0175E5CD">
+		<category>other</category>
+		<fourcc>SCPT</fourcc>
+		<extension>oldscript</extension>
+		<directory>oldscript</directory>
+		<description />
+	</type>
+	
+	<type id="0x0181B0D2">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>abk</extension>
+		<directory>abk</directory>
+		<description />
+	</type>
+	
+	<type id="0x01D0E75D">
+		<category>material</category>
+		<fourcc>MATD</fourcc>
+		<extension>material</extension>
+		<directory>material</directory>
+		<description />
+	</type>
+	
+	<type id="0x01D10F34">
+		<category>model</category>
+		<fourcc>MLOD</fourcc>
+		<extension>lod</extension>
+		<directory>lod</directory>
+		<description />
+	</type>
+	
+	<type id="0x01A527DB">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>snr</extension>
+		<directory>snr</directory>
+		<description />
+	</type>
+	
+	<type id="0x01EEF63A">
+		<category>sound</category>
+		<fourcc>_AUD</fourcc>
+		<extension>sns</extension>
+		<directory>sns</directory>
+		<description />
+	</type>
+	
+	<type id="0x02019972">
+		<category>material</category>
+		<fourcc>MTST</fourcc>
+		<extension>mtst</extension>
+		<directory>mtst</directory>
+		<description />
+	</type>
+	
+	<type id="0x021D7E8C">
+		<category>other</category>
+		<fourcc>SPT2</fourcc>
+		<extension>speedtree</extension>
+		<directory>speedtree</directory>
+		<description />
+	</type>
+	
+	<type id="0x022B756C">
+		<category>world</category>
+		<fourcc>WRDH</fourcc>
+		<extension>wdescnamehash</extension>
+		<directory>wdescnamehash</directory>
+		<description />
+	</type>
+	
+	<type id="0x025C90A6">
+		<category>ui</category>
+		<fourcc>_CSS</fourcc>
+		<extension>css</extension>
+		<directory>css</directory>
+		<description>Cascading StyleSheet</description>
+	</type>
+	
+	<type id="0x025C95B6">
+		<category>ui</category>
+		<fourcc>LAYO</fourcc>
+		<extension>layout</extension>
+		<directory>layout</directory>
+		<description />
+	</type>
+	
+	<type id="0x025ED6F4">
+		<category>game</category>
+		<fourcc>SIMO</fourcc>
+		<extension>outfit</extension>
+		<directory>outfit</directory>
+		<description />
+	</type>
+	
+	<type id="0x029E333B">
+		<category>sound</category>
+		<fourcc>VOCE</fourcc>
+		<extension>voicemix</extension>
+		<directory>voicemix</directory>
+		<description />
+	</type>
+	
+	<type id="0x02C9EFF2">
+		<category>sound</category>
+		<fourcc>MIXR</fourcc>
+		<extension>audmix</extension>
+		<directory>audmix</directory>
+		<description />
+	</type>
+	
+	<type id="0x02B9F662">
+		<category>sound</category>
+		<fourcc>PROP</fourcc>
+		<extension>audprop</extension>
+		<directory>audprop</directory>
+		<description />
+	</type>
+	
+	<type id="0x02D5DF13">
+		<category>game</category>
+		<fourcc>JAZZ</fourcc>
+		<extension>jazz</extension>
+		<directory>jazz</directory>
+		<description />
+	</type>
+	
+	<type id="0x02DC343F">
+		<category>game</category>
+		<fourcc>OBJK</fourcc>
+		<extension>objkey</extension>
+		<directory>objkey</directory>
+		<description />
+	</type>
+	
+	<type id="0x033260E3">
+		<category>game</category>
+		<fourcc>TkMk</fourcc>
+		<extension>trackmask</extension>
+		<directory>trackmask</directory>
+		<description />
+	</type>
+	
+	<type id="0x0333406C">
+		<category>config</category>
+		<fourcc>_XML</fourcc>
+		<extension>xml</extension>
+		<directory>xml</directory>
+		<description />
+	</type>
+	
+	<type id="0x0341ACC9">
+		<category>material</category>
+		<fourcc>TXTF</fourcc>
+		<extension>fabric</extension>
+		<directory>fabric</directory>
+		<description />
+	</type>
+	
+	<type id="0x033A1435">
+		<category>material</category>
+		<fourcc>TXTC</fourcc>
+		<extension>compositor</extension>
+		<directory>compositor</directory>
+		<description />
+	</type>
+	
+	<type id="0x034AEECB">
+		<category>game</category>
+		<fourcc>CASP</fourcc>
+		<extension>caspart</extension>
+		<directory>caspart</directory>
+		<description />
+	</type>
+	
+	<type id="0x0354796A">
+		<category>material</category>
+		<fourcc>TONE</fourcc>
+		<extension>skintone</extension>
+		<directory>skintone</directory>
+		<description />
+	</type>
+	
+	<type id="0x03555BA8">
+		<category>material</category>
+		<fourcc>TONE</fourcc>
+		<extension>hairtone</extension>
+		<directory>hairtone</directory>
+		<description />
+	</type>
+	
+	<type id="0x0355E0A6">
+		<category>model</category>
+		<fourcc>BOND</fourcc>
+		<extension>bonedelta</extension>
+		<directory>bonedelta</directory>
+		<description />
+	</type>
+	
+	<type id="0x0358B08A">
+		<category>material</category>
+		<fourcc>FACE</fourcc>
+		<extension>faceblend</extension>
+		<directory>faceblend</directory>
+		<description />
+	</type>
+	
+	<type id="0x03B33DDF">
+		<category>game</category>
+		<fourcc>ITUN</fourcc>
+		<extension>tuning</extension>
+		<directory>tuning</directory>
+		<description />
+	</type>
+	
+	<type id="0x03B4C61D">
+		<category>other</category>
+		<fourcc>LITE</fourcc>
+		<extension>light</extension>
+		<directory>light</directory>
+		<description />
+	</type>
+	
+	<type id="0x03D843C2">
+		<category>other</category>
+		<fourcc>CCHE</fourcc>
+		<extension>cacheentry</extension>
+		<directory>cacheentry</directory>
+		<description />
+	</type>
+	
+	<type id="0x03D86EA4">
+		<category>other</category>
+		<fourcc>DETL</fourcc>
+		<extension>details</extension>
+		<directory>details</directory>
+		<description />
+	</type>
+	
+	<type id="0x0418FE2A">
+		<category>game</category>
+		<fourcc>CFEN</fourcc>
+		<extension>fence</extension>
+		<directory>fence</directory>
+		<description />
+	</type>
+	
+	<type id="0x044AE110">
+		<category>game</category>
+		<fourcc>COMP</fourcc>
+		<extension>complate</extension>
+		<directory>complate</directory>
+		<description />
+	</type>
+	
+	<type id="0x049CA4CD">
+		<category>game</category>
+		<fourcc>CSTR</fourcc>
+		<extension>stairs</extension>
+		<directory>stairs</directory>
+		<description />
+	</type>
+	
+	<type id="0x04A4D951">
+		<category>world</category>
+		<fourcc>WDET</fourcc>
+		<extension>wrlddetail</extension>
+		<directory>wrlddetail</directory>
+		<description />
+	</type>
+	
+	<type id="0x04AC5D93">
+		<category />
+		<fourcc>CPRX</fourcc>
+		<extension>proxyprod</extension>
+		<directory>proxyprod</directory>
+		<description />
+	</type>
+	
+	<type id="0x04B30669">
+		<category>game</category>
+		<fourcc>CTTL</fourcc>
+		<extension>terraintool</extension>
+		<directory>terraintool</directory>
+		<description />
+	</type>
+	
+	<type id="0x04C58103">
+		<category>game</category>
+		<fourcc>CRAL</fourcc>
+		<extension>railing</extension>
+		<directory>railing</directory>
+		<description />
+	</type>
+	
+	<type id="0x04D82D90">
+		<category>other</category>
+		<fourcc>CMRU</fourcc>
+		<extension>cachemru</extension>
+		<directory>cachemru</directory>
+		<description />
+	</type>
+	
+	<type id="0x04ED4BB2">
+		<category>game</category>
+		<fourcc>CTPT</fourcc>
+		<extension>terrainpaint</extension>
+		<directory>terrainpaint</directory>
+		<description />
+	</type>
+	
+	<type id="0x04F3CC01">
+		<category>game</category>
+		<fourcc>CFIR</fourcc>
+		<extension>fireplace</extension>
+		<directory>fireplace</directory>
+		<description />
+	</type>
+	
+	<type id="0x04F51033">
+		<category>game</category>
+		<fourcc>SBNO</fourcc>
+		<extension>binoutfit</extension>
+		<directory>binoutfit</directory>
+		<description />
+	</type>
+	
+	<type id="0x04F88964">
+		<category>game</category>
+		<fourcc>SIME</fourcc>
+		<extension>simexport</extension>
+		<directory>simexport</directory>
+		<description />
+	</type>
+	
+	<type id="0x051DF2DD">
+		<category>material</category>
+		<fourcc>CBLN</fourcc>
+		<extension>compblend</extension>
+		<directory>compblend</directory>
+		<description />
+	</type>
+	
+	<type id="0x0580A2B4">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0580A2B4</directory>
+		<description />
+	</type>
+	
+	<type id="0x0580A2B5">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0580A2B5</directory>
+		<description />
+	</type>
+	
+	<type id="0x0580A2B6">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0580A2B6</directory>
+		<description />
+	</type>
+	
+	<type id="0x0580A2CE">
+		<category>image</category>
+		<fourcc>SNAP</fourcc>
+		<extension>png</extension>
+		<directory>png_0580A2CE</directory>
+		<description />
+	</type>
+	
+	<type id="0x0580A2CF">
+		<category>image</category>
+		<fourcc>SNAP</fourcc>
+		<extension>png</extension>
+		<directory>png_0580A2CF</directory>
+		<description />
+	</type>
+	
+	<type id="0x0589DC44">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0589DC44</directory>
+		<description />
+	</type>
+	
+	<type id="0x0589DC45">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0589DC45</directory>
+		<description />
+	</type>
+	
+	<type id="0x0589DC46">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_0589DC46</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B17698">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B17698</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B17699">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B17699</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B1769A">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B1769A</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B1B524">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B1B524</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B1B525">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B1B525</directory>
+		<description />
+	</type>
+	
+	<type id="0x05B1B526">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_05B1B526</directory>
+		<description />
+	</type>
+	
+	<type id="0x05ED1226">
+		<category>other</category>
+		<fourcc>REFS</fourcc>
+		<extension>references</extension>
+		<directory>references</directory>
+		<description />
+	</type>
+	
+	<type id="0x05FF6BA4">
+		<category>other</category>
+		<fourcc>2ARY</fourcc>
+		<extension>bnry</extension>
+		<directory>2ary</directory>
+		<description />
+	</type>
+	
+	<type id="0x0604ABDA">
+		<category>other</category>
+		<fourcc>DMTR</fourcc>
+		<extension>dreamtree</extension>
+		<directory>dreamtree</directory>
+		<description />
+	</type>
+	
+	<type id="0x060B390C">
+		<category>game</category>
+		<fourcc>CWAT</fourcc>
+		<extension>water</extension>
+		<directory>water</directory>
+		<description />
+	</type>
+	
+	<type id="0x062853A8">
+		<category>game</category>
+		<fourcc>FAMD</fourcc>
+		<extension>household</extension>
+		<directory>household</directory>
+		<description />
+	</type>
+	
+	<type id="0x062C8204">
+		<category>material</category>
+		<fourcc>BBLN</fourcc>
+		<extension>bodyblend</extension>
+		<directory>bodyblend</directory>
+		<description />
+	</type>
+	
+	<type id="0x062E9EE0">
+		<category>ui</category>
+		<fourcc>_TTF</fourcc>
+		<extension>ttf</extension>
+		<directory>ttf</directory>
+		<description>TrueType Font</description>
+	</type>
+	
+	<type id="0x06302271">
+		<category>material</category>
+		<fourcc>CINF</fourcc>
+		<extension>color</extension>
+		<directory>color</directory>
+		<description />
+	</type>
+	
+	<type id="0x06326213">
+		<category>game</category>
+		<fourcc>OBCI</fourcc>
+		<extension>objcolor</extension>
+		<directory>objcolor</directory>
+		<description />
+	</type>
+	
+	<type id="0x063261DA">
+		<category>game</category>
+		<fourcc>HINF</fourcc>
+		<extension>haircolor</extension>
+		<directory>haircolor</directory>
+		<description />
+	</type>
+	
+	<type id="0x065DF841">
+		<category>other</category>
+		<fourcc>CPCA</fourcc>
+		<extension>cpcache</extension>
+		<directory>cpcache</directory>
+		<description />
+	</type>
+	
+	<type id="0x0668F628">
+		<category>world</category>
+		<fourcc>WDDT</fourcc>
+		<extension>wdescdetail</extension>
+		<directory>wdescdetail</directory>
+		<description />
+	</type>
+	
+	<type id="0x0668F630">
+		<category>world</category>
+		<fourcc>WDNL</fourcc>
+		<extension>numlots</extension>
+		<directory>numlots</directory>
+		<description />
+	</type>
+	
+	<type id="0x0668F635">
+		<category>world</category>
+		<fourcc>TWNI</fourcc>
+		<extension>png</extension>
+		<directory>town_image</directory>
+		<description />
+	</type>
+	
+	<type id="0x0668F639">
+		<category>world</category>
+		<fourcc>TWNP</fourcc>
+		<extension>imgpath</extension>
+		<directory>imgpath</directory>
+		<description />
+	</type>
+	
+	<type id="0x067CAA11">
+		<category>model</category>
+		<fourcc>BGEO</fourcc>
+		<extension>blendgeom</extension>
+		<directory>blendgeom</directory>
+		<description />
+	</type>
+	
+	<type id="0x06B981ED">
+		<category>game</category>
+		<fourcc>OBJS</fourcc>
+		<extension>objs</extension>
+		<directory>objs</directory>
+		<description />
+	</type>
+	
+	<type id="0x06CE4804">
+		<category>world</category>
+		<fourcc>META</fourcc>
+		<extension>worldmeta</extension>
+		<directory>worldmeta</directory>
+		<description />
+	</type>
+	
+	<type id="0x073FAA07">
+		<category>game</category>
+		<fourcc>S3SA</fourcc>
+		<extension>s3sa</extension>
+		<directory>s3sa</directory>
+		<description>Signed Assembly</description>
+	</type>
+	
+	<type id="0x0C37A5B5">
+		<category>other</category>
+		<fourcc>LOOK</fourcc>
+		<extension>lookuptab</extension>
+		<directory>lookuptab</directory>
+		<description />
+	</type>
+	
+	<type id="0x11C258C0">
+		<category>other</category>
+		<fourcc>CTRG</fourcc>
+		<extension>bnry</extension>
+		<directory>ctrg</directory>
+		<description />
+	</type>
+	
+	<type id="0x1A3201CD">
+		<category>other</category>
+		<fourcc>_MOD</fourcc>
+		<extension>override</extension>
+		<directory>override</directory>
+		<description />
+	</type>
+	
+	<type id="0x1F886EAD">
+		<category>config</category>
+		<fourcc>_INI</fourcc>
+		<extension>ini</extension>
+		<directory>ini</directory>
+		<description />
+	</type>
+	
+	<type id="0x220557DA">
+		<category>ui</category>
+		<fourcc>STBL</fourcc>
+		<extension>stbl</extension>
+		<directory>stbl</directory>
+		<description>String Table</description>
+	</type>
+	
+	<type id="0x2653E3C8">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2653E3C8</directory>
+		<description />
+	</type>
+	
+	<type id="0x2653E3C9">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2653E3C9</directory>
+		<description />
+	</type>
+	
+	<type id="0x2653E3CA">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2653E3CA</directory>
+		<description />
+	</type>
+	
+	<type id="0x2D4284F0">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2D4284F0</directory>
+		<description />
+	</type>
+	
+	<type id="0x2D4284F1">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2D4284F1</directory>
+		<description />
+	</type>
+	
+	<type id="0x2D4284F2">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_2D4284F2</directory>
+		<description />
+	</type>
+	
+	<type id="0x2E75C764">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_2E75C764</directory>
+		<description />
+	</type>
+	
+	<type id="0x2E75C765">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_2E75C765</directory>
+		<description />
+	</type>
+	
+	<type id="0x2E75C766">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_2E75C766</directory>
+		<description />
+	</type>
+	
+	<type id="0x2F7D0002">
+		<category>image</category>
+		<fourcc>IMAG</fourcc>
+		<extension>jpg</extension>
+		<directory>jpg</directory>
+		<description />
+	</type>
+	
+	<type id="0x2F7D0004">
+		<category>image</category>
+		<fourcc>IMAG</fourcc>
+		<extension>png</extension>
+		<directory>png</directory>
+		<description />
+	</type>
+	
+	<type id="0x2F7D0006">
+		<category>image</category>
+		<fourcc>IMAG</fourcc>
+		<extension>tga</extension>
+		<directory>tga</directory>
+		<description />
+	</type>
+	
+	<type id="0x2F7D0008">
+		<category>image</category>
+		<fourcc>UITX</fourcc>
+		<extension>uitexture</extension>
+		<directory>uitexture</directory>
+		<description />
+	</type>
+	
+	<type id="0x319E4F1D">
+		<category>game</category>
+		<fourcc>OBJD</fourcc>
+		<extension>object</extension>
+		<directory>object</directory>
+		<description />
+	</type>
+	
+	<type id="0x35A33E29">
+		<category>world</category>
+		<fourcc>WDSH</fourcc>
+		<extension>wdeschash</extension>
+		<directory>wdeschash</directory>
+		<description />
+	</type>
+	
+	<type id="0x3A65AF29">
+		<category>game</category>
+		<fourcc>MINF</fourcc>
+		<extension>makeup</extension>
+		<directory>makeup</directory>
+		<description />
+	</type>
+	
+	<type id="0x4D1A5589">
+		<category>game</category>
+		<fourcc>OBJN</fourcc>
+		<extension>objn</extension>
+		<directory>objn</directory>
+		<description />
+	</type>
+	
+	<type id="0x4E97BAD8">
+		<category>game</category>
+		<fourcc>OBSC</fourcc>
+		<extension>objscript</extension>
+		<directory>objscript</directory>
+		<description />
+	</type>
+	
+	<type id="0x515CA4CD">
+		<category>game</category>
+		<fourcc>CWAL</fourcc>
+		<extension>wall</extension>
+		<directory>wall</directory>
+		<description />
+	</type>
+	
+	<type id="0x5DE9DBA0">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_5DE9DBA0</directory>
+		<description />
+	</type>
+	
+	<type id="0x5DE9DBA1">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_5DE9DBA1</directory>
+		<description />
+	</type>
+	
+	<type id="0x5DE9DBA2">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_5DE9DBA2</directory>
+		<description />
+	</type>
+	
+	<type id="0x626F60CC">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_626F60CC</directory>
+		<description />
+	</type>
+	
+	<type id="0x626F60CD">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_626F60CD</directory>
+		<description />
+	</type>
+	
+	<type id="0x626F60CE">
+		<category>image</category>
+		<fourcc>THUM</fourcc>
+		<extension>png</extension>
+		<directory>png_626F60CE</directory>
+		<description />
+	</type>
+	
+	<type id="0x63A33EA7">
+		<category>model</category>
+		<fourcc>ANIM</fourcc>
+		<extension>animimg</extension>
+		<directory>animimg</directory>
+		<description />
+	</type>
+	
+	<type id="0x6B20C4F3">
+		<category>model</category>
+		<fourcc>CLIP</fourcc>
+		<extension>animation</extension>
+		<directory>animation</directory>
+		<description />
+	</type>
+	
+	<type id="0x6B6D837D">
+		<category>image</category>
+		<fourcc>SNAP</fourcc>
+		<extension>png</extension>
+		<directory>png_6B6D837D</directory>
+		<description />
+	</type>
+	
+	<type id="0x6B6D837E">
+		<category>image</category>
+		<fourcc>SNAP</fourcc>
+		<extension>png</extension>
+		<directory>png_6B6D837E</directory>
+		<description />
+	</type>
+	
+	<type id="0x6B6D837F">
+		<category>image</category>
+		<fourcc>SNAP</fourcc>
+		<extension>png</extension>
+		<directory>png_6B6D837F</directory>
+		<description />
+	</type>
+	
+	<type id="0x72683C15">
+		<category>model</category>
+		<fourcc>STPR</fourcc>
+		<extension>sktonepreset</extension>
+		<directory>sktonepreset</directory>
+		<description />
+	</type>
+	
+	<type id="0x736884F1">
+		<category>game</category>
+		<fourcc>VPXY</fourcc>
+		<extension>proxy</extension>
+		<directory>proxy</directory>
+		<description />
+	</type>
+	
+	<type id="0x73E93EEB">
+		<category>config</category>
+		<fourcc>_XML</fourcc>
+		<extension>manifest</extension>
+		<directory>manifest</directory>
+		<description />
+	</type>
+	
+	<type id="0x8070223D">
+		<category>sound</category>
+		<fourcc>AUDT</fourcc>
+		<extension>audtun</extension>
+		<directory>audtun</directory>
+		<description />
+	</type>
+	
+	<type id="0x82B43584">
+		<category>config</category>
+		<fourcc>_CRC</fourcc>
+		<extension>checksum</extension>
+		<directory>checksum</directory>
+		<description />
+	</type>
+	
+	<type id="0x8EAF13DE">
+		<category>model</category>
+		<fourcc>_RIG</fourcc>
+		<extension>grannyrig</extension>
+		<directory>grannyrig</directory>
+		<description />
+	</type>
+	
+	<type id="0x8FFB80F6">
+		<category>texture</category>
+		<fourcc>_ADS</fourcc>
+		<extension>dds</extension>
+		<directory>ad</directory>
+		<description />
+	</type>
+	
+	<type id="0x9063660D">
+		<category>world</category>
+		<fourcc>WTXT</fourcc>
+		<extension>wrldtxtrmap</extension>
+		<directory>wrldtxtrmap</directory>
+		<description />
+	</type>
+	
+	<type id="0x9151E6BC">
+		<category>game</category>
+		<fourcc>CWST</fourcc>
+		<extension>wallstyle</extension>
+		<directory>wallstyle</directory>
+		<description />
+	</type>
+	
+	<type id="0x91EDBD3E">
+		<category>game</category>
+		<fourcc>CRST</fourcc>
+		<extension>roofstyle</extension>
+		<directory>roofstyle</directory>
+		<description />
+	</type>
+	
+	<type id="0x94C5D14A">
+		<category>config</category>
+		<fourcc>SIGR</fourcc>
+		<extension>signature</extension>
+		<directory>signature</directory>
+		<description />
+	</type>
+	
+	<type id="0xB1CC1AF6">
+		<category>video</category>
+		<fourcc>_VID</fourcc>
+		<extension>video</extension>
+		<directory>video</directory>
+		<description />
+	</type>
+	
+	<type id="0xB4DD716B">
+		<category>game</category>
+		<fourcc>_INV</fourcc>
+		<extension>inventory</extension>
+		<directory>inventory</directory>
+		<description />
+	</type>
+	
+	<type id="0xCF9A4ACE">
+		<category>other</category>
+		<fourcc>MDLR</fourcc>
+		<extension>modular</extension>
+		<directory>modular</directory>
+		<description />
+	</type>
+	
+	<type id="0xD063545B">
+		<category>game</category>
+		<fourcc>LDES</fourcc>
+		<extension>lotdesc</extension>
+		<directory>lotdesc</directory>
+		<description />
+	</type>
+	
+	<type id="0xD3044521">
+		<category>other</category>
+		<fourcc>RSLT</fourcc>
+		<extension>slot</extension>
+		<directory>slot</directory>
+		<description />
+	</type>
+	
+	<type id="0xD382BF57">
+		<category>game</category>
+		<fourcc>FTPT</fourcc>
+		<extension>footprint</extension>
+		<directory>footprint</directory>
+		<description />
+	</type>
+	
+	<type id="0xD4D9FBE5">
+		<category>material</category>
+		<fourcc>PTRN</fourcc>
+		<extension>patternlist</extension>
+		<directory>patternlist</directory>
+		<description />
+	</type>
+	
+	<type id="0xD55F7CAF">
+		<category>model</category>
+		<fourcc>LRIG</fourcc>
+		<extension>lightrig</extension>
+		<directory>lightrig</directory>
+		<description />
+	</type>
+	
+	<type id="0xD84E7FC5">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_D84E7FC5</directory>
+		<description />
+	</type>
+	
+	<type id="0xD84E7FC6">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_D84E7FC6</directory>
+		<description />
+	</type>
+	
+	<type id="0xD84E7FC7">
+		<category>image</category>
+		<fourcc>ICON</fourcc>
+		<extension>png</extension>
+		<directory>png_D84E7FC7</directory>
+		<description />
+	</type>
+	
+	<type id="0xD9BD0909">
+		<category>world</category>
+		<fourcc>WDNM</fourcc>
+		<extension>wdescname</extension>
+		<directory>wdescname</directory>
+		<description />
+	</type>
+	
+	<type id="0xEA5118B0">
+		<category>effect</category>
+		<fourcc>_SWB</fourcc>
+		<extension>effects</extension>
+		<directory>effects</directory>
+		<description />
+	</type>
+	
+	<type id="0xF0FF5598">
+		<category>other</category>
+		<fourcc>TRIG</fourcc>
+		<extension>triggers</extension>
+		<directory>triggers</directory>
+		<description />
+	</type>
+	
+	<type id="0xF1EDBD86">
+		<category>material</category>
+		<fourcc>CRMT</fourcc>
+		<extension>roofmatrl</extension>
+		<directory>roofmatrl</directory>
+		<description />
+	</type>
+	
+	<type id="0xF3A38370">
+		<category>config</category>
+		<fourcc>NGMP</fourcc>
+		<extension>guidmap</extension>
+		<directory>guidmap</directory>
+		<description />
+	</type>
+	
+	<type id="0xF609FD60">
+		<category>world</category>
+		<fourcc>WPID</fourcc>
+		<extension>wpackid</extension>
+		<directory>wpackid</directory>
+		<description />
+	</type>
+</types>
