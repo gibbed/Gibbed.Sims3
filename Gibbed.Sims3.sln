@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.FileFormats", "Gibbed.Sims3.FileFormats\Gibbed.Sims3.FileFormats.csproj", "{214B19EA-BB81-4122-A9CA-F8F08CC13869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Helpers", "Gibbed.Helpers\Gibbed.Helpers.csproj", "{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Test", "Gibbed.Sims3.Test\Gibbed.Sims3.Test.csproj", "{66C8B6A5-9500-4161-A9FF-748C385373A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.PackageViewer", "Gibbed.Sims3.PackageViewer\Gibbed.Sims3.PackageViewer.csproj", "{B0A863C1-D23B-4CEA-AD8F-CC9E97079113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.RefPack", "Gibbed.RefPack\Gibbed.RefPack.csproj", "{479C9180-E748-4F45-9E12-26E73D7F3442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.BuildPackage", "Gibbed.Sims3.BuildPackage\Gibbed.Sims3.BuildPackage.csproj", "{F69B1D59-78E6-48DB-86DB-10D70F9A64DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Granny2", "Gibbed.Granny2\Gibbed.Granny2.csproj", "{104CEEBA-67EF-4A4A-A7E0-67784ACFDF72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.BruteFNV", "Gibbed.Sims3.BruteFNV\Gibbed.Sims3.BruteFNV.csproj", "{EF91FA73-916C-4239-AD89-046A4C784D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ExportableContent", "Gibbed.Sims3.ExportableContent\Gibbed.Sims3.ExportableContent.csproj", "{5E984A32-495E-48FA-887F-CD128071301B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.PackageDiff", "Gibbed.Sims3.PackageDiff\Gibbed.Sims3.PackageDiff.csproj", "{8BD9476D-68D2-44EB-A5C5-6F5A673B2947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.PackageInfo", "Gibbed.Sims3.PackageInfo\Gibbed.Sims3.PackageInfo.csproj", "{87D3CE9B-3255-464B-9436-9EF6667D733C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Sassy", "Gibbed.Sims3.Sassy\Gibbed.Sims3.Sassy.csproj", "{391B71B2-2D7D-4B9D-A068-A436F26B1251}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214B19EA-BB81-4122-A9CA-F8F08CC13869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214B19EA-BB81-4122-A9CA-F8F08CC13869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214B19EA-BB81-4122-A9CA-F8F08CC13869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214B19EA-BB81-4122-A9CA-F8F08CC13869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C8B6A5-9500-4161-A9FF-748C385373A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C8B6A5-9500-4161-A9FF-748C385373A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C8B6A5-9500-4161-A9FF-748C385373A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C8B6A5-9500-4161-A9FF-748C385373A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A863C1-D23B-4CEA-AD8F-CC9E97079113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A863C1-D23B-4CEA-AD8F-CC9E97079113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A863C1-D23B-4CEA-AD8F-CC9E97079113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A863C1-D23B-4CEA-AD8F-CC9E97079113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479C9180-E748-4F45-9E12-26E73D7F3442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479C9180-E748-4F45-9E12-26E73D7F3442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479C9180-E748-4F45-9E12-26E73D7F3442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479C9180-E748-4F45-9E12-26E73D7F3442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69B1D59-78E6-48DB-86DB-10D70F9A64DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69B1D59-78E6-48DB-86DB-10D70F9A64DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69B1D59-78E6-48DB-86DB-10D70F9A64DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69B1D59-78E6-48DB-86DB-10D70F9A64DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104CEEBA-67EF-4A4A-A7E0-67784ACFDF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104CEEBA-67EF-4A4A-A7E0-67784ACFDF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104CEEBA-67EF-4A4A-A7E0-67784ACFDF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104CEEBA-67EF-4A4A-A7E0-67784ACFDF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF91FA73-916C-4239-AD89-046A4C784D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF91FA73-916C-4239-AD89-046A4C784D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF91FA73-916C-4239-AD89-046A4C784D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF91FA73-916C-4239-AD89-046A4C784D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E984A32-495E-48FA-887F-CD128071301B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E984A32-495E-48FA-887F-CD128071301B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E984A32-495E-48FA-887F-CD128071301B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E984A32-495E-48FA-887F-CD128071301B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD9476D-68D2-44EB-A5C5-6F5A673B2947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD9476D-68D2-44EB-A5C5-6F5A673B2947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD9476D-68D2-44EB-A5C5-6F5A673B2947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD9476D-68D2-44EB-A5C5-6F5A673B2947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D3CE9B-3255-464B-9436-9EF6667D733C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D3CE9B-3255-464B-9436-9EF6667D733C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D3CE9B-3255-464B-9436-9EF6667D733C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D3CE9B-3255-464B-9436-9EF6667D733C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

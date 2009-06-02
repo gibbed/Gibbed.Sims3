@@ -1,0 +1,4 @@
+TestObjects.dll
+ScriptCore.dll
+SimIFace.dll
+Sims3Metadata.dll

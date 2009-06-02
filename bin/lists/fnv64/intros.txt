@@ -1,0 +1,12 @@
+EALogo
+Sims3Logo_ENG
+Sims3Logo_POR
+Sims3Logo_SPA
+Sims3Logo_FRE
+Sims3Logo_GER
+Sims3Logo_DUT
+Sims3Logo_THAI
+Sims3Logo_JPN
+Sims3Logo_CHI_TRAD
+Sims3Logo_CHI_SIMP
+Sims3Intro
