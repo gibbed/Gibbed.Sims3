@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<types svn="$Id: types.xml 62 2009-06-02 06:33:49Z rick $" revision="$Revision: 62 $">
+<types svn="$Id$" revision="$Revision$">
 	<type id="0x00AE6C67">
 		<category>model</category>
 		<fourcc>BONE</fourcc>
