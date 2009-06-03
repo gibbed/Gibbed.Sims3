@@ -325,7 +325,7 @@
 		<fourcc>COMP</fourcc>
 		<extension>complate</extension>
 		<directory>complate</directory>
-		<description />
+		<description>Style / recolor preset</description>
 	</type>
 	
 	<type id="0x049CA4CD">
