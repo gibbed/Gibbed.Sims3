@@ -175,10 +175,6 @@ namespace Gibbed.Sims3.FileFormats
                 int count = input.ReadS32(false);
                 for (int i = 0; i < count; i++)
                 {
-                    if (i == 2353)
-                    {
-                    }
-
                     Effects.VisualEffect visualEffect = new Effects.VisualEffect();
                     visualEffect.Deserialize(input, version);
                     this.VisualEffects.Entries.Add(visualEffect);
@@ -201,16 +197,6 @@ namespace Gibbed.Sims3.FileFormats
             while (id != -1)
             {
                 this.EffectNames.Add(id, input.ReadASCIIZ());
-
-                if (id == 0)
-                {
-                }
-
-                if (this.EffectNames[id] == "simcensorfx")
-                {
-                    Effects.VisualEffect ve = (Effects.VisualEffect)this.VisualEffects.Entries[id];
-                }
-
                 id = input.ReadS32(false);
             }
 
