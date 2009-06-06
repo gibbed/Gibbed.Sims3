@@ -5,7 +5,7 @@ using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats
 {
-    public class ScenegraphFile : IFileFormat
+    public class ScenegraphFile : IFormat
     {
         public Boolean LittleEndian;
         public UInt32 Version;

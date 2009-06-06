@@ -261,6 +261,7 @@ namespace Gibbed.Sims3.FileFormats
                     {
                         MemoryEntry memory = (MemoryEntry)kvp.Value;
 
+                        /*
                         byte[] compressed = memory.Data.RefPackCompress();
                         if (compressed.Length < memory.Data.Length)
                         {
@@ -271,6 +272,7 @@ namespace Gibbed.Sims3.FileFormats
                             memory.Data = compressed;
                         }
                         else
+                        */
                         {
                             entry.DecompressedSize = memory.DecompressedSize;
                             entry.CompressedSize = memory.CompressedSize | 0x80000000;
@@ -360,8 +362,8 @@ namespace Gibbed.Sims3.FileFormats
                     {
                         MemoryEntry memory = (MemoryEntry)kvp.Value;
 
+                        /*
                         byte[] compressed = memory.Data.RefPackCompress();
-
                         if (compressed.Length < memory.Data.Length)
                         {
                             entry.DecompressedSize = (uint)(memory.Data.Length);
@@ -372,6 +374,7 @@ namespace Gibbed.Sims3.FileFormats
                             memory.Data = compressed;
                         }
                         else
+                        */
                         {
                             entry.DecompressedSize = memory.DecompressedSize;
                             entry.CompressedSize = memory.CompressedSize | 0x80000000;

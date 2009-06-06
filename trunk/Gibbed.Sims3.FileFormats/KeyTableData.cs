@@ -13,7 +13,7 @@ namespace Gibbed.Sims3.FileFormats
         public UInt32 Unknown4;
     }
 
-    public class KeyTableData : IFileFormat
+    public class KeyTableData : IFormat
     {
         public List<KeyEntry> Keys;
 
