@@ -98,7 +98,7 @@
     <Compile Include="ResourceKey.cs" />
     <Compile Include="RigFile.cs" />
     <Compile Include="StringTableFile.cs" />
-    <Compile Include="U00821D60.cs" />
+    <Compile Include="Effects\U00821D60.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gibbed.Helpers\Gibbed.Helpers.csproj">

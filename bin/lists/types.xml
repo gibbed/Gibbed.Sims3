@@ -1072,6 +1072,13 @@
 		<description />
 	</type>
 	
+	<type id="0xB52F5055">
+		<category>model</category>
+		<fourcc>BLND</fourcc>
+		<extension>blendunit</extension>
+		<directory>blendunit</directory>
+	</type>
+	
 	<type id="0xCF9A4ACE">
 		<category>other</category>
 		<fourcc>MDLR</fourcc>

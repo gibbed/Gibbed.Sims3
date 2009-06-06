@@ -48,6 +48,11 @@ namespace Gibbed.Sims3.PackageInfo
                     {
                         typePaths[key.TypeId].Add(path);
                     }
+
+                    if (key.InstanceId == 0xebb33014677ef1f3 || key.InstanceId == 0xf3f17e671430b3eb)
+                    {
+                        Console.WriteLine(key.ToString());
+                    }
                 }
 
                 input.Close();
@@ -55,13 +60,13 @@ namespace Gibbed.Sims3.PackageInfo
 
             foreach (KeyValuePair<uint, int> typeCount in typeCounts)
             {
-                Console.WriteLine("{0:X8} : {1}", typeCount.Key, typeCount.Value);
+                //Console.WriteLine("{0:X8} : {1}", typeCount.Key, typeCount.Value);
 
                 if (typePaths.ContainsKey(typeCount.Key) == true && typeCount.Value < 20)
                 {
                     foreach (string path in typePaths[typeCount.Key])
                     {
-                        Console.WriteLine(path);
+                        //Console.WriteLine(path);
                     }
                 }
             }
