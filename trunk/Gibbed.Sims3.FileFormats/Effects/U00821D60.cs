@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using Gibbed.Helpers;
 
-namespace Gibbed.Sims3.FileFormats
+namespace Gibbed.Sims3.FileFormats.Effects
 {
     public class U00821D60 : IFormat
     {
