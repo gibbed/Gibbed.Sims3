@@ -7,7 +7,7 @@ namespace Gibbed.Sims3.FileFormats
     public class GeometryFile : IFormat
     {
         public UInt32 Version;
-        public KeyTableData KeyTable;
+        public KeyTable KeyTable;
 
         public void Serialize(Stream output)
         {
@@ -43,7 +43,7 @@ namespace Gibbed.Sims3.FileFormats
                     return;
                 }
 
-                this.KeyTable = new KeyTableData();
+                this.KeyTable = new KeyTable();
                 this.KeyTable.Deserialize(chunk);
             }
         }
