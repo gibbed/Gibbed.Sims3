@@ -4,7 +4,7 @@ using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats
 {
-    public class GeometryFile : IFileFormat
+    public class GeometryFile : IFormat
     {
         public UInt32 Version;
         public KeyTableData KeyTable;

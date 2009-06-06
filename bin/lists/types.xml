@@ -592,6 +592,14 @@
 		<description />
 	</type>
 	
+	<type id="0x063261f0">
+		<category>game</category>
+		<fourcc>CASC</fourcc>
+		<extension>cascolorinfo</extension>
+		<directory>cascolorinfo</directory>
+		<description>CAS color info</description>
+	</type>
+	
 	<type id="0x06326213">
 		<category>game</category>
 		<fourcc>OBCI</fourcc>

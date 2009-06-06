@@ -225,6 +225,11 @@ namespace Gibbed.Sims3.PackageViewer
 				return;
 			}
 
+            if (!(e.Node.Tag is List<DatabasePackedFile.Entry>))
+            {
+                return;
+            }
+
             List<DatabasePackedFile.Entry> files = e.Node.Tag as List<DatabasePackedFile.Entry>;
 
 			this.fileList.BeginUpdate();

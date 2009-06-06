@@ -2,7 +2,7 @@
 
 namespace Gibbed.Sims3.FileFormats
 {
-    public interface IFileFormat
+    public interface IFormat
     {
         void Serialize(Stream output);
         void Deserialize(Stream input);
