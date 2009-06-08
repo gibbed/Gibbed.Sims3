@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats.Effects
@@ -10,6 +8,9 @@ namespace Gibbed.Sims3.FileFormats.Effects
     {
         public short MinimumVersion { get { return 0; } }
         public short MaximumVersion { get { return 0; } }
+
+        public UInt64 Unknown1;
+        public UInt64 Unknown2;
 
         public void Serialize(Stream output, short version)
         {
@@ -59,8 +60,8 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         public void Deserialize(Stream input, short version)
         {
-            input.ReadU64(false);
-            input.ReadU64(false);
+            this.Unknown1 = input.ReadU64(false);
+            this.Unknown2 = input.ReadU64(false);
             
             int count = input.ReadS32(false);
             for (int i = 0; i < count; i++)

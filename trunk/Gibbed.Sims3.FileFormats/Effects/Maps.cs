@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats.Effects
 {
