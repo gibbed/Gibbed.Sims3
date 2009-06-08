@@ -20,6 +20,9 @@ namespace Gibbed.Sims3.Sassy
             ushort blocks = (ushort)((input.Length / 512) + ((input.Length % 512 > 0) ? 1 : 0));
 
             byte[] sum = new byte[64];
+            byte[] sumMessage = Encoding.ASCII.GetBytes("This is a fake signed assembly.");
+            Array.Copy(sumMessage, sum, sumMessage.Length);
+
             byte[] table = new byte[blocks * 8];
 
             // Calculate initial seed
