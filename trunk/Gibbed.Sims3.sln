@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.PackageInfo", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Sassy", "Gibbed.Sims3.Sassy\Gibbed.Sims3.Sassy.csproj", "{391B71B2-2D7D-4B9D-A068-A436F26B1251}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Helpers", "Gibbed.Sims3.Helpers\Gibbed.Sims3.Helpers.csproj", "{969C52EF-3C6F-4FFE-8F69-76C05780B506}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{391B71B2-2D7D-4B9D-A068-A436F26B1251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

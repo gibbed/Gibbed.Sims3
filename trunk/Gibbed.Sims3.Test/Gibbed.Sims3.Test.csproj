@@ -69,6 +69,10 @@
       <Project>{214B19EA-BB81-4122-A9CA-F8F08CC13869}</Project>
       <Name>Gibbed.Sims3.FileFormats</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gibbed.Sims3.Helpers\Gibbed.Sims3.Helpers.csproj">
+      <Project>{969C52EF-3C6F-4FFE-8F69-76C05780B506}</Project>
+      <Name>Gibbed.Sims3.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
