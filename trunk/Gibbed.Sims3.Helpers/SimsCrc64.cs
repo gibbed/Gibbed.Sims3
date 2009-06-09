@@ -139,14 +139,14 @@ namespace Gibbed.Sims3.Helpers
         {
             return new byte[]
             {
-			    (byte)((x >> 56) & 0xFF),
-			    (byte)((x >> 48) & 0xFF),
-			    (byte)((x >> 40) & 0xFF),
-			    (byte)((x >> 32) & 0xFF),
-			    (byte)((x >> 24) & 0xFF),
-			    (byte)((x >> 16) & 0xFF),
-			    (byte)((x >> 8) & 0xFF),
-			    (byte)((x >> 0) & 0xFF),
+                (byte)((x >> 56) & 0xFF),
+                (byte)((x >> 48) & 0xFF),
+                (byte)((x >> 40) & 0xFF),
+                (byte)((x >> 32) & 0xFF),
+                (byte)((x >> 24) & 0xFF),
+                (byte)((x >> 16) & 0xFF),
+                (byte)((x >> 8) & 0xFF),
+                (byte)((x >> 0) & 0xFF),
             };
         }
     }
