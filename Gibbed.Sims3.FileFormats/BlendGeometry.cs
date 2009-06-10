@@ -47,6 +47,16 @@ namespace Gibbed.Sims3.FileFormats
                 throw new InvalidOperationException();
             }
 
+            if (unknown5 != 8)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (unknown6 != 12)
+            {
+                throw new InvalidOperationException();
+            }
+
             if (unknown1 > 0)
             {
                 UInt32 _unknown3 = unknown3;
