@@ -33,7 +33,7 @@ namespace Gibbed.Sims3.FileFormats
             }
 
             UInt32 unknown1 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown2 = input.ReadU32(this.LittleEndian);
+            UInt32 unknown2 = input.ReadU32(this.LittleEndian); // should always be 4
             UInt32 unknown3 = input.ReadU32(this.LittleEndian);
             UInt32 unknown4 = input.ReadU32(this.LittleEndian);
             UInt32 unknown5 = input.ReadU32(this.LittleEndian); // should always be 8
