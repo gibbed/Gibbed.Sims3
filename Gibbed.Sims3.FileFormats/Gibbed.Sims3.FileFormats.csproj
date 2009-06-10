@@ -88,6 +88,7 @@
     <Compile Include="Effects\U008456A0.cs" />
     <Compile Include="Effects\VisualEffect.cs" />
     <Compile Include="Exceptions.cs" />
+    <Compile Include="FacialBlend.cs" />
     <Compile Include="GeometryFile.cs" />
     <Compile Include="IEffectFormat.cs" />
     <Compile Include="ScenegraphFile.cs" />

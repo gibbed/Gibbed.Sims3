@@ -1,7 +1,28 @@
 ﻿using System;
+using System.IO;
+using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats
 {
+    public static partial class ResourceKeyHelper
+    {
+        public static ResourceKey ReadResourceKey(this Stream stream)
+        {
+            ResourceKey key = new ResourceKey();
+            key.TypeId = stream.ReadU32();
+            key.GroupId = stream.ReadU32();
+            key.InstanceId = stream.ReadU64();
+            return key;
+        }
+
+        public static void WriteResourceKey(this Stream stream, ResourceKey key)
+        {
+            stream.WriteU32(key.TypeId);
+            stream.WriteU32(key.GroupId);
+            stream.WriteU64(key.InstanceId);
+        }
+    }
+
     public struct ResourceKey
     {
         public UInt32 TypeId;
