@@ -12,23 +12,23 @@ namespace Gibbed.Sims3.FileFormats
         public UInt32 Unknown2;
         public ResourceKey Unknown3;
 
-        public void Serialize(Stream output, UInt32 version, KeyTable keyTable)
+        public void Serialize(Stream output, FacialBlend parent)
         {
             throw new NotImplementedException();
         }
 
-        public void Deserialize(Stream input, UInt32 version, KeyTable keyTable)
+        public void Deserialize(Stream input, FacialBlend parent)
         {
             this.Unknown1 = input.ReadU32();
             this.Unknown2 = input.ReadU32();
 
-            if (version < 7)
+            if (parent.Version < 7)
             {
                 this.Unknown3 = input.ReadResourceKey();
             }
             else
             {
-                this.Unknown3 = keyTable.Keys[input.ReadS32()];
+                this.Unknown3 = parent.KeyTable.Keys[input.ReadS32()];
             }
         }
     }
@@ -39,12 +39,12 @@ namespace Gibbed.Sims3.FileFormats
         public List<FacialBlendEntry> BlendEntries;
         public List<FacialBlendEntry> BoneEntries;
 
-        public void Serialize(Stream output, UInt32 version, KeyTable keyTable)
+        public void Serialize(Stream output, FacialBlend parent)
         {
             throw new NotImplementedException();
         }
 
-        public void Deserialize(Stream input, UInt32 version, KeyTable keyTable)
+        public void Deserialize(Stream input, FacialBlend parent)
         {
             this.Flags = input.ReadU32();
             int count;
@@ -54,7 +54,7 @@ namespace Gibbed.Sims3.FileFormats
             for (int i = 0; i < count; i++)
             {
                 FacialBlendEntry entry = new FacialBlendEntry();
-                entry.Deserialize(input, version, keyTable);
+                entry.Deserialize(input, parent);
                 this.BlendEntries.Add(entry);
             }
 
@@ -63,7 +63,7 @@ namespace Gibbed.Sims3.FileFormats
             for (int i = 0; i < count; i++)
             {
                 FacialBlendEntry entry = new FacialBlendEntry();
-                entry.Deserialize(input, version, keyTable);
+                entry.Deserialize(input, parent);
                 this.BoneEntries.Add(entry);
             }
         }
@@ -115,7 +115,7 @@ namespace Gibbed.Sims3.FileFormats
             for (int i = 0; i < count; i++)
             {
                 FacialBlendRegion block = new FacialBlendRegion();
-                block.Deserialize(input, this.Version, this.KeyTable);
+                block.Deserialize(input, this);
                 this.Regions.Add(block);
             }
         }
