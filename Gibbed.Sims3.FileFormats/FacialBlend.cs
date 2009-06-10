@@ -91,8 +91,6 @@ namespace Gibbed.Sims3.FileFormats
                 throw new InvalidOperationException("bad version");
             }
 
-            this.KeyTable = new KeyTable();
-
             if (this.Version >= 7)
             {
                 long keyTableOffset = input.ReadS32();
@@ -100,14 +98,12 @@ namespace Gibbed.Sims3.FileFormats
                 keyTableOffset += input.Position;
                 keyTableOffset -= 4;
 
+                this.KeyTable = new KeyTable();
+
                 long originalPosition = input.Position;
                 input.Seek(keyTableOffset, SeekOrigin.Begin);
                 this.KeyTable.Deserialize(input);
                 input.Seek(originalPosition, SeekOrigin.Begin);
-            }
-            else
-            {
-                this.KeyTable.Keys = new List<ResourceKey>();
             }
 
             this.Unknown1 = input.ReadUTF16(input.ReadU8(), false);
