@@ -33,11 +33,11 @@ namespace Gibbed.Sims3.FileFormats
         }
     }
 
-    public class FacialBlendBlock
+    public class FacialBlendRegion
     {
-        public UInt32 Unknown1;
-        public List<FacialBlendEntry> Unknown2;
-        public List<FacialBlendEntry> Unknown3;
+        public UInt32 Flags;
+        public List<FacialBlendEntry> BlendEntries;
+        public List<FacialBlendEntry> BoneEntries;
 
         public void Serialize(Stream output, UInt32 version, KeyTable keyTable)
         {
@@ -46,25 +46,25 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input, UInt32 version, KeyTable keyTable)
         {
-            this.Unknown1 = input.ReadU32();
+            this.Flags = input.ReadU32();
             int count;
 
             count = input.ReadS32();
-            this.Unknown2 = new List<FacialBlendEntry>();
+            this.BlendEntries = new List<FacialBlendEntry>();
             for (int i = 0; i < count; i++)
             {
                 FacialBlendEntry entry = new FacialBlendEntry();
                 entry.Deserialize(input, version, keyTable);
-                this.Unknown2.Add(entry);
+                this.BlendEntries.Add(entry);
             }
 
             count = input.ReadS32();
-            this.Unknown3 = new List<FacialBlendEntry>();
+            this.BoneEntries = new List<FacialBlendEntry>();
             for (int i = 0; i < count; i++)
             {
                 FacialBlendEntry entry = new FacialBlendEntry();
                 entry.Deserialize(input, version, keyTable);
-                this.Unknown3.Add(entry);
+                this.BoneEntries.Add(entry);
             }
         }
     }
@@ -73,10 +73,10 @@ namespace Gibbed.Sims3.FileFormats
     {
         public UInt32 Version;
         public KeyTable KeyTable;
-        public string Unknown1;
+        public string Name;
         public UInt32 Unknown2;
         public ResourceKey Unknown3;
-        public List<FacialBlendBlock> Unknown4;
+        public List<FacialBlendRegion> Regions;
 
         public void Serialize(Stream output)
         {
@@ -106,17 +106,17 @@ namespace Gibbed.Sims3.FileFormats
                 input.Seek(originalPosition, SeekOrigin.Begin);
             }
 
-            this.Unknown1 = input.ReadUTF16(input.ReadU8(), false);
+            this.Name = input.ReadUTF16(input.ReadU8(), false);
             this.Unknown2 = input.ReadU32();
             this.Unknown3 = (this.Version < 8) ? new ResourceKey(0, 0, 0) : input.ReadResourceKey();
 
             int count = input.ReadS32();
-            this.Unknown4 = new List<FacialBlendBlock>();
+            this.Regions = new List<FacialBlendRegion>();
             for (int i = 0; i < count; i++)
             {
-                FacialBlendBlock block = new FacialBlendBlock();
+                FacialBlendRegion block = new FacialBlendRegion();
                 block.Deserialize(input, this.Version, this.KeyTable);
-                this.Unknown4.Add(block);
+                this.Regions.Add(block);
             }
         }
     }
