@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlendGeometry.cs" />
     <Compile Include="BlendUnit.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DatabasePackedFile.cs" />
