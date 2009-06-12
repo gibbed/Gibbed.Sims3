@@ -25,7 +25,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
             {
                 if (parent.Version < 3)
                 {
-                    this.Unknown1.Add(input.ReadResourceKeyIGT());
+                    this.Unknown1.Add(input.ReadResourceKeyITG());
                 }
                 else
                 {
@@ -88,7 +88,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                 {
                     if (this.Version < 3)
                     {
-                        this.UnknownEntry1.Add(input.ReadResourceKeyIGT());
+                        this.UnknownEntry1.Add(input.ReadResourceKeyITG());
                     }
                     else
                     {
@@ -121,7 +121,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                 {
                     if (this.Version < 3)
                     {
-                        this.Unknown11 = input.ReadResourceKeyIGT();
+                        this.Unknown11 = input.ReadResourceKeyITG();
                     }
                     else
                     {
