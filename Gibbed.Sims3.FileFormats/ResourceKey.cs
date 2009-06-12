@@ -22,20 +22,20 @@ namespace Gibbed.Sims3.FileFormats
             stream.WriteU64(key.InstanceId);
         }
 
-        public static ResourceKey ReadResourceKeyITG(this Stream stream)
+        public static ResourceKey ReadResourceKeyIGT(this Stream stream)
         {
             ResourceKey key = new ResourceKey();
             key.InstanceId = stream.ReadU64();
-            key.TypeId = stream.ReadU32();
             key.GroupId = stream.ReadU32();
+            key.TypeId = stream.ReadU32();
             return key;
         }
 
-        public static void WriteResourceKeyITG(this Stream stream, ResourceKey key)
+        public static void WriteResourceKeyIGT(this Stream stream, ResourceKey key)
         {
             stream.WriteU64(key.InstanceId);
-            stream.WriteU32(key.TypeId);
             stream.WriteU32(key.GroupId);
+            stream.WriteU32(key.TypeId);
         }
     }
 
