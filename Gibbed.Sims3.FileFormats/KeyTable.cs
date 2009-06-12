@@ -5,6 +5,26 @@ using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats
 {
+    public static partial class KeyTableHelper
+    {
+        public static KeyTable ReadKeyTable(this Stream stream, int headerSize)
+        {
+            long keyTableOffset = stream.ReadS32();
+            int keyTableSize = stream.ReadS32();
+            keyTableOffset += stream.Position;
+            keyTableOffset -= headerSize;
+
+            KeyTable keyTable = new KeyTable();
+
+            long originalPosition = stream.Position;
+            stream.Seek(keyTableOffset, SeekOrigin.Begin);
+            keyTable.Deserialize(stream);
+            stream.Seek(originalPosition, SeekOrigin.Begin);
+
+            return keyTable;
+        }
+    }
+
     public class KeyTable : IFormat
     {
         public List<ResourceKey> Keys;
