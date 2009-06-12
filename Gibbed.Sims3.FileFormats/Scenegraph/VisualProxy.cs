@@ -44,12 +44,12 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
 
         public byte Unknown02;
         public UInt32 Unknown03;
-        public UInt32 Unknown04;
-        public UInt32 Unknown05;
-        public UInt32 Unknown06;
-        public UInt32 Unknown07;
-        public UInt32 Unknown08;
-        public UInt32 Unknown09;
+        public float Unknown04;
+        public float Unknown05;
+        public float Unknown06;
+        public float Unknown07;
+        public float Unknown08;
+        public float Unknown09;
         public bool Unknown10;
         public ResourceKey Unknown11;
 
@@ -102,12 +102,12 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
             }
 
             this.Unknown02 = input.ReadU8();
-            this.Unknown03 = input.ReadU32();
-            this.Unknown04 = input.ReadU32();
-            this.Unknown05 = input.ReadU32();
-            this.Unknown06 = input.ReadU32();
-            this.Unknown07 = input.ReadU32();
-            this.Unknown08 = input.ReadU32();
+            this.Unknown03 = input.ReadF32();
+            this.Unknown04 = input.ReadF32();
+            this.Unknown05 = input.ReadF32();
+            this.Unknown06 = input.ReadF32();
+            this.Unknown07 = input.ReadF32();
+            this.Unknown08 = input.ReadF32();
 
             if (this.Version >= 4)
             {
