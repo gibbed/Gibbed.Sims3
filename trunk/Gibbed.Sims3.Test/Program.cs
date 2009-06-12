@@ -8,6 +8,7 @@ using Gibbed.RefPack;
 using System.Runtime.InteropServices;
 using Gibbed.Sims3.FileFormats;
 using Gibbed.Sims3.ExportableContent;
+using Gibbed.Sims3.Helpers;
 
 namespace Gibbed.Sims3.Test
 {
@@ -15,8 +16,17 @@ namespace Gibbed.Sims3.Test
     {
         static void Main(string[] args)
         {
-            Stream input = File.OpenRead("C:\\Users\\Rick\\Desktop\\effect\\effect\\effects\\#0051185B\\Sims3Effects.effects");
-            new EffectsFile().Deserialize(input);
+            string[] files = Directory.GetFiles("C:\\Users\\Rick\\Desktop\\blendgeom", "*.blendgeom", SearchOption.AllDirectories);
+
+            foreach (string file in files)
+            {
+                Stream input = File.OpenRead(file);
+
+                BlendGeometry facialBlend = new BlendGeometry();
+                facialBlend.Deserialize(input);
+
+                input.Close();
+            }
         }
     }
 }

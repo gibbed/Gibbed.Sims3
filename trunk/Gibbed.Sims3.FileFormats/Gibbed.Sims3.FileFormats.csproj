@@ -100,6 +100,7 @@
     <Compile Include="PropertyStream.cs" />
     <Compile Include="ResourceKey.cs" />
     <Compile Include="RigFile.cs" />
+    <Compile Include="Scenegraph\VisualProxy.cs" />
     <Compile Include="StringTableFile.cs" />
     <Compile Include="Effects\U00821D60.cs" />
   </ItemGroup>

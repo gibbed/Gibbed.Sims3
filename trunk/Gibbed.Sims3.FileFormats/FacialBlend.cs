@@ -24,7 +24,7 @@ namespace Gibbed.Sims3.FileFormats
 
             if (parent.Version < 7)
             {
-                this.Unknown3 = input.ReadResourceKey();
+                this.Unknown3 = input.ReadResourceKeyTGI();
             }
             else
             {
@@ -108,7 +108,7 @@ namespace Gibbed.Sims3.FileFormats
 
             this.Name = input.ReadUTF16(input.ReadU8(), false);
             this.Unknown2 = input.ReadU32();
-            this.Unknown3 = (this.Version < 8) ? new ResourceKey(0, 0, 0) : input.ReadResourceKey();
+            this.Unknown3 = (this.Version < 8) ? new ResourceKey(0, 0, 0) : input.ReadResourceKeyTGI();
 
             int count = input.ReadS32();
             this.Regions = new List<FacialBlendRegion>();
