@@ -273,10 +273,10 @@
 	</type>
 	
 	<type id="0x0358B08A">
-		<category>material</category>
+		<category>model</category>
 		<fourcc>FACE</fourcc>
-		<extension>faceblend</extension>
-		<directory>faceblend</directory>
+		<extension>facialblend</extension>
+		<directory>facialblend</directory>
 		<description />
 	</type>
 	

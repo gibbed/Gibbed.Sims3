@@ -6,7 +6,7 @@ namespace Gibbed.Sims3.FileFormats
 {
     public static partial class ResourceKeyHelper
     {
-        public static ResourceKey ReadResourceKey(this Stream stream)
+        public static ResourceKey ReadResourceKeyTGI(this Stream stream)
         {
             ResourceKey key = new ResourceKey();
             key.TypeId = stream.ReadU32();
@@ -15,11 +15,27 @@ namespace Gibbed.Sims3.FileFormats
             return key;
         }
 
-        public static void WriteResourceKey(this Stream stream, ResourceKey key)
+        public static void WriteResourceKeyTGI(this Stream stream, ResourceKey key)
         {
             stream.WriteU32(key.TypeId);
             stream.WriteU32(key.GroupId);
             stream.WriteU64(key.InstanceId);
+        }
+
+        public static ResourceKey ReadResourceKeyIGT(this Stream stream)
+        {
+            ResourceKey key = new ResourceKey();
+            key.InstanceId = stream.ReadU64();
+            key.GroupId = stream.ReadU32();
+            key.TypeId = stream.ReadU32();
+            return key;
+        }
+
+        public static void WriteResourceKeyIGTI(this Stream stream, ResourceKey key)
+        {
+            stream.WriteU64(key.InstanceId);
+            stream.WriteU32(key.GroupId);
+            stream.WriteU32(key.TypeId);
         }
     }
 
