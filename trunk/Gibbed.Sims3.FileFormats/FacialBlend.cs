@@ -93,17 +93,7 @@ namespace Gibbed.Sims3.FileFormats
 
             if (this.Version >= 7)
             {
-                long keyTableOffset = input.ReadS32();
-                int keyTableSize = input.ReadS32();
-                keyTableOffset += input.Position;
-                keyTableOffset -= 4;
-
-                this.KeyTable = new KeyTable();
-
-                long originalPosition = input.Position;
-                input.Seek(keyTableOffset, SeekOrigin.Begin);
-                this.KeyTable.Deserialize(input);
-                input.Seek(originalPosition, SeekOrigin.Begin);
+                this.KeyTable = input.ReadKeyTable(4);
             }
 
             this.Name = input.ReadUTF16(input.ReadU8(), false);
