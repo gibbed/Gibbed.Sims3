@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Gibbed.Helpers;
 using System.IO;
+using Gibbed.Helpers;
 
 namespace Gibbed.Sims3.FileFormats.Scenegraph
 {
