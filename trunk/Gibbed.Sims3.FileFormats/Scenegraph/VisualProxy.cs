@@ -43,13 +43,13 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
         public List<ResourceKey> UnknownEntry1;
 
         public byte Unknown02;
-        public UInt32 Unknown03;
+        public float Unknown03;
         public float Unknown04;
         public float Unknown05;
         public float Unknown06;
         public float Unknown07;
         public float Unknown08;
-        public float Unknown09;
+        public UInt32 Unknown09;
         public bool Unknown10;
         public ResourceKey Unknown11;
 
