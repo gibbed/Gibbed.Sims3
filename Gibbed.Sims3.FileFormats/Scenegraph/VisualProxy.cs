@@ -17,10 +17,10 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
 
         public void Deserialize(Stream input, VisualProxy parent)
         {
-            this.Unknown0 = input.ReadU8();
+            this.Unknown0 = input.ReadValueU8();
             this.Unknown1 = new List<ResourceKey>();
 
-            byte count = input.ReadU8();
+            byte count = input.ReadValueU8();
             for (byte i = 0; i < count; i++)
             {
                 if (parent.Version < 3)
@@ -29,7 +29,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                 }
                 else
                 {
-                    this.Unknown1.Add(parent.KeyTable.Keys[input.ReadS32()]);
+                    this.Unknown1.Add(parent.KeyTable.Keys[input.ReadValueS32()]);
                 }
             }
         }
@@ -60,7 +60,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
 
         public void Deserialize(Stream input)
         {
-            this.Version = input.ReadU32();
+            this.Version = input.ReadValueU32();
             if (this.Version > 4)
             {
                 throw new InvalidOperationException("bad version");
@@ -71,12 +71,12 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                 this.KeyTable = input.ReadKeyTable(4);
             }
 
-            byte count = input.ReadU8();
+            byte count = input.ReadValueU8();
             this.UnknownEntry0 = new List<VisualProxyEntry0>();
             this.UnknownEntry1 = new List<ResourceKey>();
             for (byte i = 0; i < count; i++)
             {
-                byte type = input.ReadU8();
+                byte type = input.ReadValueU8();
 
                 if (type == 0)
                 {
@@ -92,7 +92,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                     }
                     else
                     {
-                        this.UnknownEntry1.Add(this.KeyTable.Keys[input.ReadS32()]);
+                        this.UnknownEntry1.Add(this.KeyTable.Keys[input.ReadValueS32()]);
                     }
                 }
                 else
@@ -101,22 +101,22 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                 }
             }
 
-            this.Unknown02 = input.ReadU8();
-            this.Unknown03 = input.ReadF32();
-            this.Unknown04 = input.ReadF32();
-            this.Unknown05 = input.ReadF32();
-            this.Unknown06 = input.ReadF32();
-            this.Unknown07 = input.ReadF32();
-            this.Unknown08 = input.ReadF32();
+            this.Unknown02 = input.ReadValueU8();
+            this.Unknown03 = input.ReadValueF32();
+            this.Unknown04 = input.ReadValueF32();
+            this.Unknown05 = input.ReadValueF32();
+            this.Unknown06 = input.ReadValueF32();
+            this.Unknown07 = input.ReadValueF32();
+            this.Unknown08 = input.ReadValueF32();
 
             if (this.Version >= 4)
             {
-                this.Unknown09 = input.ReadU32();
+                this.Unknown09 = input.ReadValueU32();
             }
 
             if (this.Version >= 2)
             {
-                this.Unknown10 = input.ReadBoolean();
+                this.Unknown10 = input.ReadValueBoolean();
                 if (this.Unknown10 == true)
                 {
                     if (this.Version < 3)
@@ -125,7 +125,7 @@ namespace Gibbed.Sims3.FileFormats.Scenegraph
                     }
                     else
                     {
-                        this.Unknown11 = this.KeyTable.Keys[input.ReadS32()];
+                        this.Unknown11 = this.KeyTable.Keys[input.ReadValueS32()];
                     }
                 }
             }

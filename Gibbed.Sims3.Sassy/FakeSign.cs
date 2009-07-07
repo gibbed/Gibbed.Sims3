@@ -35,10 +35,10 @@ namespace Gibbed.Sims3.Sassy
             seed = (UInt32)(table.Length - 1) & seed;
 
             Stream output = File.Open(outputPath, FileMode.Create, FileAccess.Write);
-            output.WriteBoolean(true);
-            output.WriteU32(0x2BC4F79F);
+            output.WriteValueBoolean(true);
+            output.WriteValueU32(0x2BC4F79F);
             output.Write(sum, 0, sum.Length);
-            output.WriteU16(blocks);
+            output.WriteValueU16(blocks);
             output.Write(table, 0, table.Length);
 
             // Encrypt data

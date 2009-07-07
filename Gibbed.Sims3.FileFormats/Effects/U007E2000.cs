@@ -17,10 +17,10 @@ namespace Gibbed.Sims3.FileFormats.Effects
         public void Deserialize(Stream input)
         {
             this.Unknown = new List<uint>();
-            int count = input.ReadS32(false);
+            int count = input.ReadValueS32(false);
             for (int i = 0; i < count; i++)
             {
-                this.Unknown.Add(input.ReadU32(false));
+                this.Unknown.Add(input.ReadValueU32(false));
             }
         }
     }

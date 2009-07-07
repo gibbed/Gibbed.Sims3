@@ -40,7 +40,7 @@ namespace Gibbed.Sims3.FileFormats
 			Int64 indexSize;
 			Int64 indexOffset;
 
-			string magic = input.ReadASCII(4);
+			string magic = input.ReadStringASCII(4);
             if (magic != "DBPF" && magic != "DBBF") // DBPF & DBBF
 			{
 				throw new NotAPackageException();
@@ -87,7 +87,7 @@ namespace Gibbed.Sims3.FileFormats
 				// Read index
 				input.Seek(indexOffset, SeekOrigin.Begin);
 
-				int presentPackageValues = input.ReadS32();
+				int presentPackageValues = input.ReadValueS32();
                 this.IndexType = presentPackageValues;
 				if ((presentPackageValues & ~7) != 0)
 				{
@@ -98,31 +98,31 @@ namespace Gibbed.Sims3.FileFormats
                 bool hasPackageGroupId = (presentPackageValues & (1 << 1)) == 1 << 1;
                 bool hasPackageHiInstanceId = (presentPackageValues & (1 << 2)) == 1 << 2;
 
-                uint packageTypeId = hasPackageTypeId ? input.ReadU32() : 0xFFFFFFFF;
-                uint packageGroupId = hasPackageGroupId ? input.ReadU32() : 0xFFFFFFFF;
-                uint packageHiInstanceId = hasPackageHiInstanceId ? input.ReadU32() : 0xFFFFFFFF;
+                uint packageTypeId = hasPackageTypeId ? input.ReadValueU32() : 0xFFFFFFFF;
+                uint packageGroupId = hasPackageGroupId ? input.ReadValueU32() : 0xFFFFFFFF;
+                uint packageHiInstanceId = hasPackageHiInstanceId ? input.ReadValueU32() : 0xFFFFFFFF;
 
 				for (int i = 0; i < indexCount; i++)
 				{
                     Entry entry = new Entry();
 
-                    entry.Key.TypeId = hasPackageTypeId ? packageTypeId : input.ReadU32();
-                    entry.Key.GroupId = hasPackageGroupId ? packageGroupId : input.ReadU32();
+                    entry.Key.TypeId = hasPackageTypeId ? packageTypeId : input.ReadValueU32();
+                    entry.Key.GroupId = hasPackageGroupId ? packageGroupId : input.ReadValueU32();
                     entry.Key.InstanceId = 0;
-                    entry.Key.InstanceId |= (hasPackageHiInstanceId ? packageHiInstanceId : input.ReadU32());
+                    entry.Key.InstanceId |= (hasPackageHiInstanceId ? packageHiInstanceId : input.ReadValueU32());
                     entry.Key.InstanceId <<= 32;
-                    entry.Key.InstanceId |= input.ReadU32();
+                    entry.Key.InstanceId |= input.ReadValueU32();
 
-                    entry.Offset = (this.Big == true) ? input.ReadS64() : input.ReadS32();
-					entry.CompressedSize = input.ReadU32();
-					entry.DecompressedSize = input.ReadU32();
+                    entry.Offset = (this.Big == true) ? input.ReadValueS64() : input.ReadValueS32();
+					entry.CompressedSize = input.ReadValueU32();
+					entry.DecompressedSize = input.ReadValueU32();
 
                     // compressed bit
                     if ((entry.CompressedSize & 0x80000000) == 0x80000000)
                     {
                         entry.CompressedSize &= ~0x80000000;
-                        entry.CompressionFlags = input.ReadS16();
-                        entry.Flags = input.ReadU16();
+                        entry.CompressionFlags = input.ReadValueS16();
+                        entry.Flags = input.ReadValueU16();
                     }
                     else
                     {
@@ -154,7 +154,7 @@ namespace Gibbed.Sims3.FileFormats
 		{
             if (this.Big == true)
             {
-                output.WriteASCII("DBBF");
+                output.WriteStringASCII("DBBF");
                 BigHeader header = new BigHeader();
                 header.MajorVersion = this.Version.Major;
                 header.MinorVersion = this.Version.Minor;
@@ -166,7 +166,7 @@ namespace Gibbed.Sims3.FileFormats
             }
             else
             {
-                output.WriteASCII("DBPF");
+                output.WriteStringASCII("DBPF");
                 Header header = new Header();
                 header.MajorVersion = this.Version.Major;
                 header.MinorVersion = this.Version.Minor;
@@ -182,7 +182,7 @@ namespace Gibbed.Sims3.FileFormats
 		{
             if (this.Entries.Count == 0)
             {
-                output.WriteU32(0); // present package values
+                output.WriteValueU32(0); // present package values
             }
             else
             {
@@ -211,55 +211,55 @@ namespace Gibbed.Sims3.FileFormats
                 presentPackageValues |= (hasPackageGroupId ? 1 : 0) << 1;
                 presentPackageValues |= (hasPackageHiInstanceId ? 1 : 0) << 2;
 
-                output.WriteS32(presentPackageValues);
+                output.WriteValueS32(presentPackageValues);
 
                 if (hasPackageTypeId == true)
                 {
-                    output.WriteU32(packageTypeId);
+                    output.WriteValueU32(packageTypeId);
                 }
 
                 if (hasPackageGroupId == true)
                 {
-                    output.WriteU32(packageGroupId);
+                    output.WriteValueU32(packageGroupId);
                 }
 
                 if (hasPackageHiInstanceId == true)
                 {
-                    output.WriteU32(packageHiInstanceId);
+                    output.WriteValueU32(packageHiInstanceId);
                 }
 
                 foreach (Entry entry in this.Entries)
                 {
                     if (hasPackageTypeId == false)
                     {
-                        output.WriteU32(entry.Key.TypeId);
+                        output.WriteValueU32(entry.Key.TypeId);
                     }
 
                     if (hasPackageGroupId == false)
                     {
-                        output.WriteU32(entry.Key.GroupId);
+                        output.WriteValueU32(entry.Key.GroupId);
                     }
 
                     if (hasPackageHiInstanceId == false)
                     {
-                        output.WriteU32((UInt32)(entry.Key.InstanceId >> 32));
+                        output.WriteValueU32((UInt32)(entry.Key.InstanceId >> 32));
                     }
 
-                    output.WriteU32((UInt32)(entry.Key.InstanceId & 0xFFFFFFFF));
+                    output.WriteValueU32((UInt32)(entry.Key.InstanceId & 0xFFFFFFFF));
 
                     if (this.Big == true)
                     {
-                        output.WriteS64(entry.Offset);
+                        output.WriteValueS64(entry.Offset);
                     }
                     else
                     {
-                        output.WriteS32((int)entry.Offset);
+                        output.WriteValueS32((int)entry.Offset);
                     }
 
-                    output.WriteU32(entry.CompressedSize);
-                    output.WriteU32(entry.DecompressedSize);
-                    output.WriteS16(entry.CompressionFlags);
-                    output.WriteU16(entry.Flags);
+                    output.WriteValueU32(entry.CompressedSize);
+                    output.WriteValueU32(entry.DecompressedSize);
+                    output.WriteValueS16(entry.CompressionFlags);
+                    output.WriteValueU16(entry.Flags);
                 }
             }
 		}

@@ -13,12 +13,12 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         public void Deserialize(Stream input)
         {
-            int count = input.ReadS32(false);
+            int count = input.ReadValueS32(false);
             for (int i = 0; i < count; i++)
             {
-                input.ReadU32(false);
-                input.ReadU32(false);
-                input.ReadU32(false);
+                input.ReadValueU32(false);
+                input.ReadValueU32(false);
+                input.ReadValueU32(false);
             }
         }
     }

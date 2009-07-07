@@ -12,19 +12,19 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Read(Stream input)
         {
-            this.Version = input.ReadS32();
+            this.Version = input.ReadValueS32();
             if (this.Version != 1)
             {
                 throw new InvalidOperationException();
             }
 
-            int count = input.ReadS32();
+            int count = input.ReadValueS32();
             this.Map = new Dictionary<ulong, string>();
             for (int i = 0; i < count; i++)
             {
-                UInt64 hash = input.ReadU64();
-                uint length = input.ReadU32();
-                string name = length == 0 ? "" : input.ReadASCII(length);
+                UInt64 hash = input.ReadValueU64();
+                uint length = input.ReadValueU32();
+                string name = length == 0 ? "" : input.ReadStringASCII(length);
                 this.Map[hash] = name;
             }
         }

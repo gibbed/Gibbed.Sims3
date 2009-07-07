@@ -70,7 +70,7 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input)
         {
-            this.Version = input.ReadU16(false);
+            this.Version = input.ReadValueU16(false);
 
             if (this.Version != 2)
             {
@@ -80,10 +80,10 @@ namespace Gibbed.Sims3.FileFormats
             // Effects
             {
                 this.Effects = new List<EffectArray>();
-                short type = input.ReadS16(false);
+                short type = input.ReadValueS16(false);
                 while (type != -1)
                 {
-                    short version = input.ReadS16(false);
+                    short version = input.ReadValueS16(false);
 
                     if (type < 0 || type >= EffectTypes.Length || EffectTypes[type] == null)
                     {
@@ -100,7 +100,7 @@ namespace Gibbed.Sims3.FileFormats
                     effects.Version = version;
                     effects.Entries = new List<IEffectFormat>();
 
-                    int count = input.ReadS32(false);
+                    int count = input.ReadValueS32(false);
                     for (int i = 0; i < count; i++)
                     {
                         IEffectFormat instance = (IEffectFormat)Activator.CreateInstance(EffectTypes[type]);
@@ -116,17 +116,17 @@ namespace Gibbed.Sims3.FileFormats
 
                     this.Effects.Add(effects);
 
-                    type = input.ReadS16(false);
+                    type = input.ReadValueS16(false);
                 }
             }
 
             // Resources
             {
                 this.Resources = new List<ResourceArray>();
-                short type = input.ReadS16(false);
+                short type = input.ReadValueS16(false);
                 while (type != -1)
                 {
-                    short version = input.ReadS16(false);
+                    short version = input.ReadValueS16(false);
 
                     if (type < 0 || type >= ResourceTypes.Length || ResourceTypes[type] == null)
                     {
@@ -143,7 +143,7 @@ namespace Gibbed.Sims3.FileFormats
                     resources.Version = version;
                     resources.Entries = new List<IEffectFormat>();
 
-                    int count = input.ReadS32(false);
+                    int count = input.ReadValueS32(false);
                     for (int i = 0; i < count; i++)
                     {
                         IEffectFormat instance = (IEffectFormat)Activator.CreateInstance(ResourceTypes[type]);
@@ -159,19 +159,19 @@ namespace Gibbed.Sims3.FileFormats
 
                     this.Resources.Add(resources);
 
-                    type = input.ReadS16(false);
+                    type = input.ReadValueS16(false);
                 }
             }
 
             // Visual effects
             {
-                short version = input.ReadS16(false);
+                short version = input.ReadValueS16(false);
 
                 this.VisualEffects = new VisualEffectArray();
                 this.VisualEffects.Version = version;
                 this.VisualEffects.Entries = new List<IEffectFormat>();
 
-                int count = input.ReadS32(false);
+                int count = input.ReadValueS32(false);
                 for (int i = 0; i < count; i++)
                 {
                     Effects.VisualEffect visualEffect = new Effects.VisualEffect();
@@ -182,7 +182,7 @@ namespace Gibbed.Sims3.FileFormats
 
             // ???
             {
-                int unk = input.ReadS32(false);
+                int unk = input.ReadValueS32(false);
                 while (unk != -1)
                 {
                     throw new NotImplementedException();
@@ -192,11 +192,11 @@ namespace Gibbed.Sims3.FileFormats
 
             this.EffectNames = new Dictionary<int, string>();
 
-            int id = input.ReadS32(false);
+            int id = input.ReadValueS32(false);
             while (id != -1)
             {
-                this.EffectNames.Add(id, input.ReadASCIIZ());
-                id = input.ReadS32(false);
+                this.EffectNames.Add(id, input.ReadStringASCIIZ());
+                id = input.ReadValueS32(false);
             }
 
             throw new NotImplementedException();

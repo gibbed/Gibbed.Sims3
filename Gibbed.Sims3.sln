@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Sassy", "Gibbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Helpers", "Gibbed.Sims3.Helpers\Gibbed.Sims3.Helpers.csproj", "{969C52EF-3C6F-4FFE-8F69-76C05780B506}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ListNatives", "Gibbed.Sims3.ListNatives\Gibbed.Sims3.ListNatives.csproj", "{DFD774FA-A249-4A08-88E5-81B8FD35A581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.PortableExecutable", "Gibbed.PortableExecutable\Gibbed.PortableExecutable.csproj", "{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,14 @@ Global
 		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969C52EF-3C6F-4FFE-8F69-76C05780B506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD774FA-A249-4A08-88E5-81B8FD35A581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD774FA-A249-4A08-88E5-81B8FD35A581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD774FA-A249-4A08-88E5-81B8FD35A581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD774FA-A249-4A08-88E5-81B8FD35A581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

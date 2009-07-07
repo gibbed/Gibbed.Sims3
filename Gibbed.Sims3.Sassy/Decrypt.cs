@@ -18,8 +18,8 @@ namespace Gibbed.Sims3.Sassy
         {
             Stream input = File.OpenRead(inputPath);
 
-            bool isEncrypted = input.ReadBoolean();
-            UInt32 typeId = input.ReadU32();
+            bool isEncrypted = input.ReadValueBoolean();
+            UInt32 typeId = input.ReadValueU32();
 
             if (isEncrypted == false || typeId != 0x2BC4F79F)
             {
@@ -31,7 +31,7 @@ namespace Gibbed.Sims3.Sassy
             byte[] theirSum = new byte[64];
             input.Read(theirSum, 0, theirSum.Length);
 
-            ushort blocks = input.ReadU16();
+            ushort blocks = input.ReadValueU16();
 
             byte[] table = new byte[blocks * 8];
             input.Read(table, 0, table.Length);

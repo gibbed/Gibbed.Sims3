@@ -18,7 +18,7 @@ namespace Gibbed.Sims3.FileFormats
         {
             long baseOffset = input.Position;
 
-            string magic = input.ReadASCII(4);
+            string magic = input.ReadStringASCII(4);
             if (magic != "BGEO" && magic != "OEGB")
             {
                 throw new InvalidDataException("not a blend geometry");
@@ -26,21 +26,21 @@ namespace Gibbed.Sims3.FileFormats
 
             this.LittleEndian = (magic == "BGEO");
 
-            this.Version = input.ReadU32(this.LittleEndian);
+            this.Version = input.ReadValueU32(this.LittleEndian);
             if (this.Version >= 0x400)
             {
                 throw new InvalidOperationException("bad version");
             }
 
-            UInt32 unknown1 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown2 = input.ReadU32(this.LittleEndian); // should always be 4
-            UInt32 unknown3 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown4 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown5 = input.ReadU32(this.LittleEndian); // should always be 8
-            UInt32 unknown6 = input.ReadU32(this.LittleEndian); // should always be 12
-            UInt32 unknown7 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown8 = input.ReadU32(this.LittleEndian);
-            UInt32 unknown9 = input.ReadU32(this.LittleEndian);
+            UInt32 unknown1 = input.ReadValueU32(this.LittleEndian);
+            UInt32 unknown2 = input.ReadValueU32(this.LittleEndian); // should always be 4
+            UInt32 unknown3 = input.ReadValueU32(this.LittleEndian);
+            UInt32 unknown4 = input.ReadValueU32(this.LittleEndian);
+            UInt32 unknown5 = input.ReadValueU32(this.LittleEndian); // should always be 8
+            UInt32 unknown6 = input.ReadValueU32(this.LittleEndian); // should always be 12
+            UInt32 unknown7 = input.ReadValueU32(this.LittleEndian);
+            UInt32 unknown8 = input.ReadValueU32(this.LittleEndian);
+            UInt32 unknown9 = input.ReadValueU32(this.LittleEndian);
 
             if (unknown2 != 4)
             {
@@ -66,15 +66,15 @@ namespace Gibbed.Sims3.FileFormats
 
                 for (int i = 0; i < unknown1; i++)
                 {
-                    UInt32 unknown10 = input.ReadU32(this.LittleEndian);
-                    UInt32 unknown11 = input.ReadU32(this.LittleEndian);
+                    UInt32 unknown10 = input.ReadValueU32(this.LittleEndian);
+                    UInt32 unknown11 = input.ReadValueU32(this.LittleEndian);
                     // unknown5 represents previous reads size (8 bytes)
 
                     for (int j = 0; j < 4; j++) // unknown2 ?
                     {
-                        UInt32 unknown12 = input.ReadU32(this.LittleEndian);
-                        UInt32 unknown13 = input.ReadU32(this.LittleEndian);
-                        UInt32 unknown14 = input.ReadU32(this.LittleEndian);
+                        UInt32 unknown12 = input.ReadValueU32(this.LittleEndian);
+                        UInt32 unknown13 = input.ReadValueU32(this.LittleEndian);
+                        UInt32 unknown14 = input.ReadValueU32(this.LittleEndian);
                         // unknown6 represents previous reads size (12 bytes)
 
                         if (unknown13 > _unknown3)
@@ -98,7 +98,7 @@ namespace Gibbed.Sims3.FileFormats
                 input.Seek(baseOffset + unknown8, SeekOrigin.Begin);
                 for (uint i = 0; i < unknown3; i++)
                 {
-                    input.ReadU32(this.LittleEndian);
+                    input.ReadValueU32(this.LittleEndian);
                 }
             }
             else
@@ -106,7 +106,7 @@ namespace Gibbed.Sims3.FileFormats
                 input.Seek(baseOffset + unknown8, SeekOrigin.Begin);
                 for (uint i = 0; i < unknown3; i++)
                 {
-                    input.ReadU16(this.LittleEndian);
+                    input.ReadValueU16(this.LittleEndian);
                 }
             }
 
@@ -115,9 +115,9 @@ namespace Gibbed.Sims3.FileFormats
                 input.Seek(baseOffset + unknown9, SeekOrigin.Begin);
                 for (uint i = 0; i < unknown4; i++)
                 {
-                    input.ReadF32(this.LittleEndian);
-                    input.ReadF32(this.LittleEndian);
-                    input.ReadF32(this.LittleEndian);
+                    input.ReadValueF32(this.LittleEndian);
+                    input.ReadValueF32(this.LittleEndian);
+                    input.ReadValueF32(this.LittleEndian);
                 }
             }
             else
@@ -125,9 +125,9 @@ namespace Gibbed.Sims3.FileFormats
                 input.Seek(baseOffset + unknown9, SeekOrigin.Begin);
                 for (uint i = 0; i < unknown4; i++)
                 {
-                    input.ReadU16(this.LittleEndian);
-                    input.ReadU16(this.LittleEndian);
-                    input.ReadU16(this.LittleEndian);
+                    input.ReadValueU16(this.LittleEndian);
+                    input.ReadValueU16(this.LittleEndian);
+                    input.ReadValueU16(this.LittleEndian);
                 }
             }
         }

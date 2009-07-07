@@ -52,7 +52,7 @@ namespace Gibbed.Sims3.PackageViewer
                     continue;
                 }
 
-                UInt64 hash = line.FNV32();
+                UInt64 hash = line.HashFNV32();
                 Files[hash] = line;
             }
 
@@ -81,7 +81,7 @@ namespace Gibbed.Sims3.PackageViewer
                     continue;
                 }
 
-                UInt64 hash = line.FNV64();
+                UInt64 hash = line.HashFNV64();
                 Files[hash] = line;
             }
 
@@ -108,7 +108,7 @@ namespace Gibbed.Sims3.PackageViewer
                 if (key.StartsWith("(hash(") && key.EndsWith("))"))
                 {
                     string tmp = key.Substring(6, key.Length - 8);
-                    id = tmp.FNV32();
+                    id = tmp.HashFNV32();
                 }
                 else
                 {

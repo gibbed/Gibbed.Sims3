@@ -22,19 +22,19 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input)
         {
-            this.Version = input.ReadU32();
+            this.Version = input.ReadValueU32();
 
-            long keyTableOffset = input.ReadS32();
-            int keyTableSize = input.ReadS32();
+            long keyTableOffset = input.ReadValueS32();
+            int keyTableSize = input.ReadValueS32();
             keyTableOffset += input.Position;
             keyTableOffset -= 4;
 
             if (this.Version >= 3)
             {
-                this.LocalizationKey = input.ReadU64();
+                this.LocalizationKey = input.ReadValueU64();
             }
 
-            int count = input.ReadS32();
+            int count = input.ReadValueS32();
             if (count < 1 || count > 2)
             {
                 throw new InvalidOperationException("count cannot be < 1 or > 2");
@@ -43,18 +43,18 @@ namespace Gibbed.Sims3.FileFormats
             this.FacialBlendResourceKeyIndices = new int[count];
             for (int i = 0; i < count; i++)
             {
-                this.FacialBlendResourceKeyIndices[i] = input.ReadS32();
+                this.FacialBlendResourceKeyIndices[i] = input.ReadValueS32();
             }
 
             if (this.Version < 3)
             {
-                this.LocalizationKey = input.ReadU64();
+                this.LocalizationKey = input.ReadValueU64();
             }
 
-            this.Bidirectional = input.ReadBoolean();
-            this.Category = input.ReadU32();
-            this.Region = input.ReadU32();
-            this.SortIndex = this.Version < 3 ? 0 : input.ReadU32();
+            this.Bidirectional = input.ReadValueBoolean();
+            this.Category = input.ReadValueU32();
+            this.Region = input.ReadValueU32();
+            this.SortIndex = this.Version < 3 ? 0 : input.ReadValueU32();
 
             input.Seek(keyTableOffset, SeekOrigin.Begin);
             this.KeyTable = new KeyTable();

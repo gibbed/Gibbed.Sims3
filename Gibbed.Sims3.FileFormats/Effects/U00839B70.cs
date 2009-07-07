@@ -14,8 +14,8 @@ namespace Gibbed.Sims3.FileFormats.Effects
         public void Deserialize(Stream input)
         {
             new U007E2000().Deserialize(input);
-            input.ReadU32(false);
-            input.ReadU32(false);
+            input.ReadValueU32(false);
+            input.ReadValueU32(false);
         }
     }
 }

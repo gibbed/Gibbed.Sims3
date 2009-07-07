@@ -30,16 +30,16 @@ namespace Gibbed.Sims3.FileFormats
                 ResourceKey key;
                 if (this.LittleEndian == true)
                 {
-                    key.InstanceId = input.ReadU64();
+                    key.InstanceId = input.ReadValueU64();
                 }
                 else
                 {
                     key.InstanceId = 0;
-                    key.InstanceId |= input.ReadU32();
-                    key.InstanceId |= (UInt64)(input.ReadU32()) << 32;
+                    key.InstanceId |= input.ReadValueU32();
+                    key.InstanceId |= (UInt64)(input.ReadValueU32()) << 32;
                 }
-                key.TypeId = input.ReadU32();
-                key.GroupId = input.ReadU32();
+                key.TypeId = input.ReadValueU32();
+                key.GroupId = input.ReadValueU32();
                 keys[i] = key;
             }
 
@@ -54,7 +54,7 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input)
         {
-            this.Version = input.ReadU32();
+            this.Version = input.ReadValueU32();
 
             // Detect little endian mode.
             if ((this.Version & 0xFFFF0000) != 0 && (this.Version & 0x0000FFFF) == 0)
@@ -66,10 +66,10 @@ namespace Gibbed.Sims3.FileFormats
                 this.LittleEndian = true;
             }
 
-            this.Unknown1 = input.ReadS32(this.LittleEndian);
-            int unknown2Count = input.ReadS32(this.LittleEndian);
-            int textureCount = input.ReadS32(this.LittleEndian);
-            int chunkCount = input.ReadS32(this.LittleEndian);
+            this.Unknown1 = input.ReadValueS32(this.LittleEndian);
+            int unknown2Count = input.ReadValueS32(this.LittleEndian);
+            int textureCount = input.ReadValueS32(this.LittleEndian);
+            int chunkCount = input.ReadValueS32(this.LittleEndian);
 
             if (unknown2Count != 0)
             {
@@ -83,8 +83,8 @@ namespace Gibbed.Sims3.FileFormats
             ChunkLocation[] chunks = new ChunkLocation[chunkCount];
             for (int i = 0; i < chunkCount; i++)
             {
-                chunks[i].Size = input.ReadU32(this.LittleEndian);
-                chunks[i].Offset = input.ReadU32(this.LittleEndian);
+                chunks[i].Size = input.ReadValueU32(this.LittleEndian);
+                chunks[i].Offset = input.ReadValueU32(this.LittleEndian);
             }
 
             this.ChunkData = new List<Stream>();
