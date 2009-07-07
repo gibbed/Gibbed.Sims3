@@ -26,7 +26,7 @@ namespace Gibbed.Sims3.FileFormats
 
             Stream chunk = scenegraph.ChunkData[0];
 
-            this.Version = chunk.ReadU32();
+            this.Version = chunk.ReadValueU32();
 
             if (this.Version > 5)
             {
@@ -35,8 +35,8 @@ namespace Gibbed.Sims3.FileFormats
 
             if (this.Version >= 3)
             {
-                UInt32 unk1 = chunk.ReadU32();
-                UInt32 unk2 = chunk.ReadU32();
+                UInt32 unk1 = chunk.ReadValueU32();
+                UInt32 unk2 = chunk.ReadValueU32();
 
                 if (unk1 == 0 || unk2 == 0)
                 {

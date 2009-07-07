@@ -9,8 +9,8 @@ namespace Gibbed.Sims3.FileFormats
     {
         public static KeyTable ReadKeyTable(this Stream stream, int headerSize)
         {
-            long keyTableOffset = stream.ReadS32();
-            int keyTableSize = stream.ReadS32();
+            long keyTableOffset = stream.ReadValueS32();
+            int keyTableSize = stream.ReadValueS32();
             keyTableOffset += stream.Position;
             keyTableOffset -= headerSize;
 
@@ -31,25 +31,25 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Serialize(Stream output)
         {
-            output.WriteS32(this.Keys.Count);
+            output.WriteValueS32(this.Keys.Count);
             foreach (ResourceKey key in this.Keys)
             {
-                output.WriteU32(key.TypeId);
-                output.WriteU32(key.GroupId);
-                output.WriteU64(key.InstanceId);
+                output.WriteValueU32(key.TypeId);
+                output.WriteValueU32(key.GroupId);
+                output.WriteValueU64(key.InstanceId);
             }
         }
 
         public void Deserialize(Stream input)
         {
             this.Keys = new List<ResourceKey>();
-            int count = input.ReadS32();
+            int count = input.ReadValueS32();
             for (int i = 0; i < count; i++)
             {
                 ResourceKey key;
-                key.TypeId = input.ReadU32();
-                key.GroupId = input.ReadU32();
-                key.InstanceId = input.ReadU64();
+                key.TypeId = input.ReadValueU32();
+                key.GroupId = input.ReadValueU32();
+                key.InstanceId = input.ReadValueU64();
                 this.Keys.Add(key);
             }
         }

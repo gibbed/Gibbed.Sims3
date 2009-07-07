@@ -16,9 +16,9 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         public void Deserialize(Stream input, short version)
         {
-            input.ReadU32(false);
-            input.ReadU16(false);
-            input.ReadU32(false);
+            input.ReadValueU32(false);
+            input.ReadValueU16(false);
+            input.ReadValueU32(false);
             new U007E2000().Deserialize(input);
             new U007E2000().Deserialize(input);
             new U007E2000().Deserialize(input);
@@ -26,8 +26,8 @@ namespace Gibbed.Sims3.FileFormats.Effects
             new U007E2000().Deserialize(input);
             new U007E2000().Deserialize(input);
             new U007E2000().Deserialize(input);
-            input.ReadU64(false);
-            input.ReadU16(false);
+            input.ReadValueU64(false);
+            input.ReadValueU16(false);
         }
     }
 }

@@ -41,27 +41,27 @@ namespace Gibbed.Sims3.FileFormats
         {
             this.DebugOffset = debugOffset + input.Position;
 
-            this.Version = input.ReadS16();
+            this.Version = input.ReadValueS16();
             if (this.Version < 1 || this.Version > 2)
             {
                 throw new Exception();
             }
-            int size = input.ReadS32();
+            int size = input.ReadValueS32();
 
             this.Data = new MemoryStream();
-            this.Data.WriteS16(this.Version);
-            this.Data.WriteS32(size);
+            this.Data.WriteValueS16(this.Version);
+            this.Data.WriteValueS32(size);
 
             byte[] data = new byte[size - (4 + 2)];
             input.Read(data, 0, data.Length);
             this.Data.Write(data, 0, data.Length);
 
             this.Items = new Dictionary<UInt32, int>();
-            short count = input.ReadS16();
+            short count = input.ReadValueS16();
             for (short i = 0; i < count; i++)
             {
-                UInt32 hash = input.ReadU32();
-                int offset = input.ReadS32();
+                UInt32 hash = input.ReadValueU32();
+                int offset = input.ReadValueS32();
                 this.Items.Add(hash, offset);
             }
         }
@@ -95,24 +95,24 @@ namespace Gibbed.Sims3.FileFormats
         public bool GetBoolean(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.Bool);
-            return this.Data.ReadBoolean();
+            return this.Data.ReadValueBoolean();
         }
 
         public Int32 GetS32(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.Int32);
-            return this.Data.ReadS32();
+            return this.Data.ReadValueS32();
         }
 
         public Int32[] GetS32s(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.Int32 ^ Hashes.Array);
 
-            int count = this.Data.ReadS32();
+            int count = this.Data.ReadValueS32();
             Int32[] rez = new Int32[count];
             for (int i = 0; i < count; i++)
             {
-                rez[i] = this.Data.ReadS32();
+                rez[i] = this.Data.ReadValueS32();
             }
             return rez;
         }
@@ -120,19 +120,19 @@ namespace Gibbed.Sims3.FileFormats
         public Int64 GetS64(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.Int64);
-            return this.Data.ReadS64();
+            return this.Data.ReadValueS64();
         }
 
         public UInt32 GetU32(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.UInt32);
-            return this.Data.ReadU32();
+            return this.Data.ReadValueU32();
         }
 
         public UInt64 GetU64(UInt32 hash)
         {
             this.SeekToItem(hash ^ Hashes.UInt64);
-            return this.Data.ReadU64();
+            return this.Data.ReadValueU64();
         }
 
         public string GetString(UInt32 hash)
@@ -144,8 +144,8 @@ namespace Gibbed.Sims3.FileFormats
                 throw new Exception("don't know how to handle this");
             }
 
-            uint length = this.Data.ReadU32();
-            return this.Data.ReadUTF16(length * 2);
+            uint length = this.Data.ReadValueU32();
+            return this.Data.ReadStringUTF16(length * 2);
         }
     }
 }

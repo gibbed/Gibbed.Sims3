@@ -19,51 +19,51 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         private void DeserializeData(Stream input)
         {
-            input.ReadU64(false);
-            byte type = input.ReadU8();
+            input.ReadValueU64(false);
+            byte type = input.ReadValueU8();
 
             switch (type)
             {
-                case 0: input.ReadU32(false); break;
-                case 1: input.ReadU32(false); break;
-                case 2: input.ReadU8(); break;
+                case 0: input.ReadValueU32(false); break;
+                case 1: input.ReadValueU32(false); break;
+                case 2: input.ReadValueU8(); break;
                 case 3:
                 {
-                    int count = input.ReadU16(false);
+                    int count = input.ReadValueU16(false);
                     for (int i = 0; i < count; i++)
                     {
-                        input.ReadU32(false);
+                        input.ReadValueU32(false);
                     }
                     break;
                 }
                 case 4:
                 {
-                    int count = input.ReadU16(false);
+                    int count = input.ReadValueU16(false);
                     for (int i = 0; i < count; i++)
                     {
-                        input.ReadU32(false);
+                        input.ReadValueU32(false);
                     }
                     break;
                 }
                 case 5:
                 {
-                    int count = input.ReadU16(false);
+                    int count = input.ReadValueU16(false);
                     for (int i = 0; i < count; i++)
                     {
-                        input.ReadU8();
+                        input.ReadValueU8();
                     }
                     break;
                 }
-                case 6: input.ReadU64(false); break;
+                case 6: input.ReadValueU64(false); break;
             }
         }
 
         public void Deserialize(Stream input, short version)
         {
-            this.Unknown1 = input.ReadU64(false);
-            this.Unknown2 = input.ReadU64(false);
+            this.Unknown1 = input.ReadValueU64(false);
+            this.Unknown2 = input.ReadValueU64(false);
             
-            int count = input.ReadS32(false);
+            int count = input.ReadValueS32(false);
             for (int i = 0; i < count; i++)
             {
                 this.DeserializeData(input);

@@ -24,23 +24,23 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Read(Stream input)
         {
-            if (input.ReadASCII(4) != "STBL")
+            if (input.ReadStringASCII(4) != "STBL")
             {
                 throw new Exception();
             }
 
-            this.Version = input.ReadS16();
+            this.Version = input.ReadValueS16();
             
-            byte unk1 = input.ReadU8();
+            byte unk1 = input.ReadValueU8();
             if (unk1 > 1)
             {
                 throw new Exception();
             }
             else if (unk1 == 1)
             {
-                UInt64 unk2 = input.ReadU64(LittleEndian);
-                byte unk3 = input.ReadU8();
-                byte unk4 = input.ReadU8();
+                UInt64 unk2 = input.ReadValueU64(LittleEndian);
+                byte unk3 = input.ReadValueU8();
+                byte unk4 = input.ReadValueU8();
             }
         }
     }

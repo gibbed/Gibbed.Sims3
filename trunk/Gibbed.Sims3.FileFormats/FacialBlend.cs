@@ -19,8 +19,8 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input, FacialBlend parent)
         {
-            this.Unknown1 = input.ReadU32();
-            this.Unknown2 = input.ReadU32();
+            this.Unknown1 = input.ReadValueU32();
+            this.Unknown2 = input.ReadValueU32();
 
             if (parent.Version < 7)
             {
@@ -28,7 +28,7 @@ namespace Gibbed.Sims3.FileFormats
             }
             else
             {
-                this.Unknown3 = parent.KeyTable.Keys[input.ReadS32()];
+                this.Unknown3 = parent.KeyTable.Keys[input.ReadValueS32()];
             }
         }
     }
@@ -46,10 +46,10 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input, FacialBlend parent)
         {
-            this.Flags = input.ReadU32();
+            this.Flags = input.ReadValueU32();
             int count;
 
-            count = input.ReadS32();
+            count = input.ReadValueS32();
             this.BlendEntries = new List<FacialBlendEntry>();
             for (int i = 0; i < count; i++)
             {
@@ -58,7 +58,7 @@ namespace Gibbed.Sims3.FileFormats
                 this.BlendEntries.Add(entry);
             }
 
-            count = input.ReadS32();
+            count = input.ReadValueS32();
             this.BoneEntries = new List<FacialBlendEntry>();
             for (int i = 0; i < count; i++)
             {
@@ -85,7 +85,7 @@ namespace Gibbed.Sims3.FileFormats
 
         public void Deserialize(Stream input)
         {
-            this.Version = input.ReadU32();
+            this.Version = input.ReadValueU32();
             if (this.Version > 8)
             {
                 throw new InvalidOperationException("bad version");
@@ -96,11 +96,11 @@ namespace Gibbed.Sims3.FileFormats
                 this.KeyTable = input.ReadKeyTable(4);
             }
 
-            this.Name = input.ReadUTF16(input.ReadU8(), false);
-            this.Unknown2 = input.ReadU32();
+            this.Name = input.ReadStringUTF16(input.ReadValueU8(), false);
+            this.Unknown2 = input.ReadValueU32();
             this.Unknown3 = (this.Version < 8) ? new ResourceKey(0, 0, 0) : input.ReadResourceKeyTGI();
 
-            int count = input.ReadS32();
+            int count = input.ReadValueS32();
             this.Regions = new List<FacialBlendRegion>();
             for (int i = 0; i < count; i++)
             {

@@ -26,19 +26,19 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         public void Serialize(Stream output, short version)
         {
-            output.WriteU32(this.Unknown1, false);
-            output.WriteU32(this.Unknown2, false);
-            output.WriteU32(this.Unknown3, false);
-            output.WriteF32(this.Unknown4, true);
-            output.WriteF32(this.Unknown5, true);
-            output.WriteU32(this.Unknown6, false);
-            output.WriteU8(this.Unknown7);
+            output.WriteValueU32(this.Unknown1, false);
+            output.WriteValueU32(this.Unknown2, false);
+            output.WriteValueU32(this.Unknown3, false);
+            output.WriteValueF32(this.Unknown4, true);
+            output.WriteValueF32(this.Unknown5, true);
+            output.WriteValueU32(this.Unknown6, false);
+            output.WriteValueU8(this.Unknown7);
             this.Unknown8.Serialize(output);
-            output.WriteF32(this.Unknown9, true);
-            output.WriteF32(this.Unknown10, true);
-            output.WriteF32(this.Unknown11, true);
-            output.WriteU32(this.Unknown12, false);
-            output.WriteS32(this.Unknown13.Count);
+            output.WriteValueF32(this.Unknown9, true);
+            output.WriteValueF32(this.Unknown10, true);
+            output.WriteValueF32(this.Unknown11, true);
+            output.WriteValueU32(this.Unknown12, false);
+            output.WriteValueS32(this.Unknown13.Count);
             foreach (UnknownType unknownType in this.Unknown13)
             {
                 unknownType.Serialize(output, version);
@@ -47,24 +47,24 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
         public void Deserialize(Stream input, short version)
         {
-            this.Unknown1 = input.ReadU32(false);
-            this.Unknown2 = input.ReadU32(false);
-            this.Unknown3 = input.ReadU32(false);
-            this.Unknown4 = input.ReadF32(true);
-            this.Unknown5 = input.ReadF32(true);
-            this.Unknown6 = input.ReadU32(false);
-            this.Unknown7 = input.ReadU8();
+            this.Unknown1 = input.ReadValueU32(false);
+            this.Unknown2 = input.ReadValueU32(false);
+            this.Unknown3 = input.ReadValueU32(false);
+            this.Unknown4 = input.ReadValueF32(true);
+            this.Unknown5 = input.ReadValueF32(true);
+            this.Unknown6 = input.ReadValueU32(false);
+            this.Unknown7 = input.ReadValueU8();
             
             this.Unknown8 = new U007E2000();
             this.Unknown8.Deserialize(input);
 
-            this.Unknown9 = input.ReadF32(true);
-            this.Unknown10 = input.ReadF32(true);
-            this.Unknown11 = input.ReadF32(true);
-            this.Unknown12 = input.ReadU32(false);
+            this.Unknown9 = input.ReadValueF32(true);
+            this.Unknown10 = input.ReadValueF32(true);
+            this.Unknown11 = input.ReadValueF32(true);
+            this.Unknown12 = input.ReadValueU32(false);
 
             this.Unknown13 = new List<UnknownType>();
-            int count = input.ReadS32(false);
+            int count = input.ReadValueS32(false);
             for (int i = 0; i < count; i++)
             {
                 UnknownType unknownType = new UnknownType();
@@ -103,73 +103,73 @@ namespace Gibbed.Sims3.FileFormats.Effects
 
             public void Serialize(Stream output, short version)
             {
-                output.WriteU8(this.Unknown01);
-                output.WriteU32(this.Unknown02, false);
-                output.WriteU16(this.Unknown03, false);
-                output.WriteU32(this.Unknown04, false);
+                output.WriteValueU8(this.Unknown01);
+                output.WriteValueU32(this.Unknown02, false);
+                output.WriteValueU16(this.Unknown03, false);
+                output.WriteValueU32(this.Unknown04, false);
                 this.Unknown05.Serialize(output);
-                output.WriteF32(this.Unknown06, true);
-                output.WriteF32(this.Unknown07, true);
-                output.WriteF32(this.Unknown08, true);
-                output.WriteU8(this.Unknown09);
-                output.WriteU8(this.Unknown10);
+                output.WriteValueF32(this.Unknown06, true);
+                output.WriteValueF32(this.Unknown07, true);
+                output.WriteValueF32(this.Unknown08, true);
+                output.WriteValueU8(this.Unknown09);
+                output.WriteValueU8(this.Unknown10);
                 this.Unknown11.Serialize(output);
-                output.WriteU32(this.Unknown12, false);
-                output.WriteU32(this.Unknown13, false);
-                output.WriteU32(this.Unknown14, false);
-                output.WriteU32(this.Unknown15, false);
-                output.WriteU32(this.Unknown16, false);
-                output.WriteU32(this.Unknown17, false);
-                output.WriteU32(this.Unknown18, false);
-                output.WriteU32(this.Unknown19, false);
-                output.WriteU16(this.Unknown20, false);
-                output.WriteU16(this.Unknown21, false);
-                output.WriteU32(this.Unknown22, false);
-                output.WriteU32(this.Unknown23, false);
+                output.WriteValueU32(this.Unknown12, false);
+                output.WriteValueU32(this.Unknown13, false);
+                output.WriteValueU32(this.Unknown14, false);
+                output.WriteValueU32(this.Unknown15, false);
+                output.WriteValueU32(this.Unknown16, false);
+                output.WriteValueU32(this.Unknown17, false);
+                output.WriteValueU32(this.Unknown18, false);
+                output.WriteValueU32(this.Unknown19, false);
+                output.WriteValueU16(this.Unknown20, false);
+                output.WriteValueU16(this.Unknown21, false);
+                output.WriteValueU32(this.Unknown22, false);
+                output.WriteValueU32(this.Unknown23, false);
 
                 if (version >= 2)
                 {
-                    output.WriteU8(this.Unknown24);
-                    output.WriteU8(this.Unknown25);
+                    output.WriteValueU8(this.Unknown24);
+                    output.WriteValueU8(this.Unknown25);
                 }
             }
 
             public void Deserialize(Stream input, short version)
             {
-                this.Unknown01 = input.ReadU8();
-                this.Unknown02 = input.ReadU32(false);
-                this.Unknown03 = input.ReadU16(false);
-                this.Unknown04 = input.ReadU32(false);
+                this.Unknown01 = input.ReadValueU8();
+                this.Unknown02 = input.ReadValueU32(false);
+                this.Unknown03 = input.ReadValueU16(false);
+                this.Unknown04 = input.ReadValueU32(false);
 
                 this.Unknown05 = new U007E69B0();
                 this.Unknown05.Deserialize(input);
 
-                this.Unknown06 = input.ReadF32(true);
-                this.Unknown07 = input.ReadF32(true);
-                this.Unknown08 = input.ReadF32(true);
-                this.Unknown09 = input.ReadU8();
-                this.Unknown10 = input.ReadU8();
+                this.Unknown06 = input.ReadValueF32(true);
+                this.Unknown07 = input.ReadValueF32(true);
+                this.Unknown08 = input.ReadValueF32(true);
+                this.Unknown09 = input.ReadValueU8();
+                this.Unknown10 = input.ReadValueU8();
 
                 this.Unknown11 = new U008456A0();
                 this.Unknown11.Deserialize(input);
 
-                this.Unknown12 = input.ReadU32(false);
-                this.Unknown13 = input.ReadU32(false);
-                this.Unknown14 = input.ReadU32(false);
-                this.Unknown15 = input.ReadU32(false);
-                this.Unknown16 = input.ReadU32(false);
-                this.Unknown17 = input.ReadU32(false);
-                this.Unknown18 = input.ReadU32(false);
-                this.Unknown19 = input.ReadU32(false);
-                this.Unknown20 = input.ReadU16(false);
-                this.Unknown21 = input.ReadU16(false);
-                this.Unknown22 = input.ReadU32(false);
-                this.Unknown23 = input.ReadU32(false);
+                this.Unknown12 = input.ReadValueU32(false);
+                this.Unknown13 = input.ReadValueU32(false);
+                this.Unknown14 = input.ReadValueU32(false);
+                this.Unknown15 = input.ReadValueU32(false);
+                this.Unknown16 = input.ReadValueU32(false);
+                this.Unknown17 = input.ReadValueU32(false);
+                this.Unknown18 = input.ReadValueU32(false);
+                this.Unknown19 = input.ReadValueU32(false);
+                this.Unknown20 = input.ReadValueU16(false);
+                this.Unknown21 = input.ReadValueU16(false);
+                this.Unknown22 = input.ReadValueU32(false);
+                this.Unknown23 = input.ReadValueU32(false);
 
                 if (version >= 2)
                 {
-                    this.Unknown24 = input.ReadU8();
-                    this.Unknown25 = input.ReadU8();
+                    this.Unknown24 = input.ReadValueU8();
+                    this.Unknown25 = input.ReadValueU8();
                 }
             }
         }

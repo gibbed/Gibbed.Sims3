@@ -13,10 +13,11 @@ namespace Gibbed.Sims3.BruteFNV
         {
             const int printStatus = 4;
             string letters = "abcdefghijklmnopqrstuvwxyz0123456789.";
-            List<uint> hash32 = new List<uint>(new uint[] { 0xF0FF5598, 0x025C90A6 });
-            List<ulong> hash64 = new List<ulong>(new ulong[] { 0xAD46C72AB29ACF48 });
+            List<uint> hash32 = new List<uint>(new uint[] { });
+            List<ulong> hash64 = new List<ulong>(new ulong[] { });
             
             string prefix = "";
+            string suffix = "";
 
             for (int length = 1; length <= 6; length++)
             {
@@ -36,18 +37,19 @@ namespace Gibbed.Sims3.BruteFNV
                     {
                         text += letters[state[i]];
                     }
+                    text += suffix;
 
                     //Console.WriteLine(text);
-                    if (hash32.Contains(text.FNV32()))
+                    if (hash32.Contains(text.HashFNV32()))
                     {
                         Console.WriteLine();
-                        Console.WriteLine("match: " + text + " => " + text.FNV32().ToString("X8"));
+                        Console.WriteLine("match: " + text + " => " + text.HashFNV32().ToString("X8"));
                     }
 
-                    if (hash64.Contains(text.FNV64()))
+                    if (hash64.Contains(text.HashFNV64()))
                     {
                         Console.WriteLine();
-                        Console.WriteLine("match: " + text + " => " + text.FNV64().ToString("X16"));
+                        Console.WriteLine("match: " + text + " => " + text.HashFNV64().ToString("X16"));
                     }
 
                     state[0]++;

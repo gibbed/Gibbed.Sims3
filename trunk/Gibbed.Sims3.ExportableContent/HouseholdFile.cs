@@ -10,7 +10,7 @@ namespace Gibbed.Sims3.ExportableContent
 
         public void Read(Stream input)
         {
-            uint version = input.ReadU32();
+            uint version = input.ReadValueU32();
             PropertyStream root = new PropertyStream();
             root.Read(input);
 
@@ -20,7 +20,7 @@ namespace Gibbed.Sims3.ExportableContent
 
         public void Write(Stream output)
         {
-            output.WriteU32(4);
+            output.WriteValueU32(4);
 
             PropertyStream root = new PropertyStream();
             this.HouseholdContents.ExportContent(root);
