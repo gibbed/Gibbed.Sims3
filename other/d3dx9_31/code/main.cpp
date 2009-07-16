@@ -25,7 +25,7 @@ void HookAdvApi()
 	DWORD old, junk;
 	VirtualProtect((void *)cvs, 5, PAGE_EXECUTE_READWRITE, &old);
 	memcpy((void *)cvs, (void*)jump, 5);
-	VirtualProtect((void *)cvs, 12, old, &junk);
+	VirtualProtect((void *)cvs, 5, old, &junk);
 	FlushInstructionCache(GetCurrentProcess(), (void *)cvs, 5);
 }
 
