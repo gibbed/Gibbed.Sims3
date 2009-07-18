@@ -120,7 +120,7 @@ namespace Gibbed.Sims3.FileFormats
             }
             else if (this._Entries.ContainsKey(newKey) == true)
             {
-                // need to throw duplicate exception here
+                throw new ArgumentException("database already contains the new resource key", "newKey");
             }
 
             Entry entry = this._Entries[oldKey];
