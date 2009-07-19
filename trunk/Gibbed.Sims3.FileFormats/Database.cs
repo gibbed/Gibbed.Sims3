@@ -440,6 +440,7 @@ namespace Gibbed.Sims3.FileFormats
                 }
 
                 this.Stream.SetLength(this.BaseOffset + this.EndOfDataOffset + indexSize);
+                clean.Close();
 
                 if (tempFileName != null)
                 {
