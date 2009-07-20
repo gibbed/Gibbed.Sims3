@@ -9,7 +9,7 @@ using Sims3.UI;
 
 namespace ChaosMod.Interactions.Sims
 {
-    public class Banish : Interaction<Sim, IViewable>
+    public class Banish : ImmediateInteraction<Sim, IViewable>
     {
         public static readonly InteractionDefinition Singleton = new Definition();
 
@@ -29,7 +29,7 @@ namespace ChaosMod.Interactions.Sims
             return true;
         }
 
-        private class Definition : InteractionDefinition<Sim, IViewable, Banish>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, Banish>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {

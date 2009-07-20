@@ -9,7 +9,7 @@ using Sims3.UI;
 
 namespace ChaosMod.Interactions.Sims
 {
-    public class Summon : Interaction<Sim, IViewable>, IChaosInteractionProvider
+    public class Summon : ImmediateInteraction<Sim, IViewable>, IChaosInteractionProvider
     {
         public InteractionDefinition GetInteractionDefinition()
         {
@@ -60,7 +60,7 @@ namespace ChaosMod.Interactions.Sims
         }
 
         [DoesntRequireTuning]
-        private class Definition : InteractionDefinition<Sim, IViewable, Summon>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, Summon>
         {
             public Household famblyHouse;
             public string interactionName;

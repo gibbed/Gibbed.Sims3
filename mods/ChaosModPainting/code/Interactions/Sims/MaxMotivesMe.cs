@@ -27,7 +27,7 @@ namespace ChaosMod.Interactions.Sims
         }
 
         [DoesntRequireTuning]
-        private class Definition : InteractionDefinition<Sim, IViewable, MaxMotivesMe>
+        private class Definition : MaxMotivesInteractionDefinition<MaxMotivesMe>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {
@@ -37,11 +37,6 @@ namespace ChaosMod.Interactions.Sims
             protected override bool Test(Sim a, IViewable target, bool isAutonomous, ref GreyedOutTooltipCallback greyedOutTooltipCallback)
             {
                 return true;
-            }
-
-            public override string[] GetPath()
-            {
-                return ChaosModPainting.BuildPath(ChaosInteractionCategory.Sim, MaxMotivesInteraction.Path);
             }
         }
     }

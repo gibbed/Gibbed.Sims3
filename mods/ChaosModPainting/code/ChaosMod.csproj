@@ -37,6 +37,7 @@
     <Compile Include="ChaosInteractionCategory.cs" />
     <Compile Include="HasChaosInteractionsAttribute.cs" />
     <Compile Include="IChaosInteractionProvider.cs" />
+    <Compile Include="Interactions\About.cs" />
     <Compile Include="Interactions\Animations\PlayAnimation.cs" />
     <Compile Include="Interactions\Animations\PlaySpecificAnimation.cs" />
     <Compile Include="Interactions\Animations\PlaySpecificLoopingAnimation.cs" />
