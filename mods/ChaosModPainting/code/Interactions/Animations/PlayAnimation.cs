@@ -53,7 +53,7 @@ namespace ChaosMod.Interactions.Animations
 
             protected override void AddInteractions(InteractionObjectPair iop, Sim actor, IViewable target, List<InteractionObjectPair> results)
             {
-                string[] menuPath = new string[] { "Animate...", "CAS - Test Animations..." };
+                string[] menuPath = ChaosModPainting.BuildPath(ChaosInteractionCategory.Animation, "CAS - Test Animations...");
                 results.Add(new InteractionObjectPair(new PlayAnimation.Definition("Full Body Animation Suite", menuPath), target));
                 results.Add(new InteractionObjectPair(new PlayAnimation.Definition("Face Animation Suite", menuPath), target));
             }
