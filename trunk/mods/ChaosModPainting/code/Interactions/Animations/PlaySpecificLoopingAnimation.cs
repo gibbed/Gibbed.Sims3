@@ -68,7 +68,7 @@ namespace ChaosMod.Interactions.Animations
                     {
                         foreach (Sim.AnimationClipDataForCAS rcas in rcasArray)
                         {
-                            PlaySpecificLoopingAnimation.Definition interaction = new PlaySpecificLoopingAnimation.Definition(rcas.InGameTextForInteraction, rcas.AnimationClipName, new string[] { "Animate...", "Play Specific Looping Animation...", str });
+                            PlaySpecificLoopingAnimation.Definition interaction = new PlaySpecificLoopingAnimation.Definition(rcas.InGameTextForInteraction, rcas.AnimationClipName, ChaosModPainting.BuildPath(ChaosInteractionCategory.Animation, "Play Specific Looping Animation...", str));
                             results.Add(new InteractionObjectPair(interaction, target));
                         }
                     }

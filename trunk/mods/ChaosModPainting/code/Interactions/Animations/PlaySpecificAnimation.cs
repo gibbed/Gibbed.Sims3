@@ -66,7 +66,7 @@ namespace ChaosMod.Interactions.Animations
                     {
                         foreach (Sim.AnimationClipDataForCAS rcas in rcasArray)
                         {
-                            PlaySpecificAnimation.Definition interaction = new PlaySpecificAnimation.Definition(rcas.InGameTextForInteraction, rcas.AnimationClipName, new string[] { "Animate...", "Play Specific Animation...", str });
+                            PlaySpecificAnimation.Definition interaction = new PlaySpecificAnimation.Definition(rcas.InGameTextForInteraction, rcas.AnimationClipName, ChaosModPainting.BuildPath(ChaosInteractionCategory.Animation, "Play Specific Animation...", str));
                             results.Add(new InteractionObjectPair(interaction, target));
                         }
                     }
