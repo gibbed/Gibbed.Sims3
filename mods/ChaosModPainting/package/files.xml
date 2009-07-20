@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<files>
+  <file groupid="0x00000000" instanceid="0x0000000000000000" typeid="0x0166038C">package.keyname</file>
+  <file groupid="0x00000000" instanceid="0xEF9735D7349ED1B9" typeid="0x319E4F1D">object\ChaosModPainting.object</file>
+  <file groupid="0x00000000" instanceid="0xEF9735D7349ED1B9" typeid="0x02DC343F">object\ChaosModPainting.objkey</file>
+  <file groupid="0x00000000" instanceid="0x4006ABDF7DE84559" typeid="0x00B2D882">object\ChaosModPaintingDDS01.dds</file>
+  <file groupid="0x00000000" instanceid="0xAE957A575A0FABBD" typeid="0x073FAA07">ChaosMod.dll.s3sa</file>
+  <file groupid="0x00000000" instanceid="0x00C0BBA605D574DE" typeid="0x220557DA">stringtables\#00C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x03C0BBA605D574DE" typeid="0x220557DA">stringtables\#03C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x04C0BBA605D574DE" typeid="0x220557DA">stringtables\#04C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x05C0BBA605D574DE" typeid="0x220557DA">stringtables\ChaosModPaintingSTBL.stbl</file>
+  <file groupid="0x00000000" instanceid="0x06C0BBA605D574DE" typeid="0x220557DA">stringtables\#06C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x07C0BBA605D574DE" typeid="0x220557DA">stringtables\#07C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x08C0BBA605D574DE" typeid="0x220557DA">stringtables\#08C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x09C0BBA605D574DE" typeid="0x220557DA">stringtables\#09C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x0AC0BBA605D574DE" typeid="0x220557DA">stringtables\#0AC0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x0BC0BBA605D574DE" typeid="0x220557DA">stringtables\#0BC0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x0EC0BBA605D574DE" typeid="0x220557DA">stringtables\#0EC0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x0FC0BBA605D574DE" typeid="0x220557DA">stringtables\#0FC0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x10C0BBA605D574DE" typeid="0x220557DA">stringtables\#10C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x11C0BBA605D574DE" typeid="0x220557DA">stringtables\#11C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x12C0BBA605D574DE" typeid="0x220557DA">stringtables\#12C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x13C0BBA605D574DE" typeid="0x220557DA">stringtables\#13C0BBA605D574DE.stbl</file>
+  <file groupid="0x00000000" instanceid="0x15C0BBA605D574DE" typeid="0x220557DA">stringtables\#15C0BBA605D574DE.stbl</file>
+</files>
