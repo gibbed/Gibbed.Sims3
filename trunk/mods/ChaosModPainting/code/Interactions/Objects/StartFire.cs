@@ -10,7 +10,7 @@ using Sims3.UI;
 
 namespace ChaosMod.Interactions.Objects
 {
-    public class StartFire : Interaction<Sim, IViewable>, IChaosInteractionProvider
+    public class StartFire : ImmediateInteraction<Sim, IViewable>, IChaosInteractionProvider
     {
         public InteractionDefinition GetInteractionDefinition()
         {
@@ -26,7 +26,7 @@ namespace ChaosMod.Interactions.Objects
             return true;
         }
 
-        private class Definition : InteractionDefinition<Sim, IViewable, StartFire>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, StartFire>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {

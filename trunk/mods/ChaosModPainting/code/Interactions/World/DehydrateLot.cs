@@ -9,7 +9,7 @@ using Sims3.UI;
 
 namespace ChaosMod.Interactions.World
 {
-    public class DehydrateLot : Interaction<Sim, IViewable>, IChaosInteractionProvider
+    public class Dehydrate : ImmediateInteraction<Sim, IViewable>, IChaosInteractionProvider
     {
         public InteractionDefinition GetInteractionDefinition()
         {
@@ -40,7 +40,7 @@ namespace ChaosMod.Interactions.World
         }
 
         [DoesntRequireTuning]
-        private class Definition : InteractionDefinition<Sim, IViewable, DehydrateLot>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, Dehydrate>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {

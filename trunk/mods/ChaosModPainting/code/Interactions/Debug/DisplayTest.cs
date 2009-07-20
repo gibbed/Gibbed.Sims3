@@ -7,7 +7,7 @@ using Sims3.UI;
 
 namespace ChaosMod.Interactions.Debug
 {
-    public class DisplayTest : Interaction<Sim, IViewable>, IChaosInteractionProvider
+    public class DisplayTest : ImmediateInteraction<Sim, IViewable>, IChaosInteractionProvider
     {
         public InteractionDefinition GetInteractionDefinition()
         {
@@ -30,7 +30,7 @@ namespace ChaosMod.Interactions.Debug
         }
 
         [DoesntRequireTuning]
-        private class Definition : InteractionDefinition<Sim, IViewable, DisplayTest>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, DisplayTest>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {

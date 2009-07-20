@@ -7,7 +7,7 @@ using Sims3.SimIFace;
 
 namespace ChaosMod.Interactions.Lots
 {
-    public class Deflagrate : Interaction<Sim, IViewable>
+    public class Deflagrate : ImmediateInteraction<Sim, IViewable>
     {
         public InteractionDefinition GetInteractionDefinition()
         {
@@ -30,7 +30,7 @@ namespace ChaosMod.Interactions.Lots
         }
 
         [DoesntRequireTuning]
-        private class Definition : InteractionDefinition<Sim, IViewable, Deflagrate>
+        private class Definition : ImmediateInteractionDefinition<Sim, IViewable, Deflagrate>
         {
             protected override string GetInteractionName(Sim a, IViewable target, InteractionObjectPair interaction)
             {
