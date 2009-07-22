@@ -78,7 +78,7 @@ namespace ChaosMod
 
             foreach (InteractionDefinition id in InteractionCache)
             {
-                base.AddInteraction(id);
+                this.AddInteraction(id);
             }
         }
     }

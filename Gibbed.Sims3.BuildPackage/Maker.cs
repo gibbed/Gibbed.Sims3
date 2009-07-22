@@ -48,7 +48,8 @@ namespace Gibbed.Sims3.BuildPackage
 
 				if (File.Exists(inputPath) == false)
 				{
-					throw new Exception(inputPath + " does not exist");
+					Console.WriteLine(inputPath + " does not exist");
+                    continue;
 				}
 
 				Stream input = new FileStream(inputPath, FileMode.Open, FileAccess.Read);

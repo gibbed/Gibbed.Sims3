@@ -92,9 +92,19 @@ namespace Gibbed.Sims3.PackageViewer
 
                 foreach (KeyValuePair<UInt64, string> value in keyNameMap.Map)
                 {
-                    if (value.Value.HashFNV64() == value.Key)
+                    UInt64 realHash = value.Value.HashFNV64();
+
+                    if (realHash == value.Key)
                     {
                         Lookup.Files[value.Key] = value.Value;
+                    }
+                    else if ((realHash & 0x7FFFFFFFFFFFFFFF) == value.Key)
+                    {
+                        Lookup.Files[value.Key] = "*" + value.Value;
+                    }
+                    else if (value.Value.HashFNV32() == value.Key)
+                    {
+                        Lookup.Files[value.Key] = ":" + value.Value;
                     }
                 }
             }

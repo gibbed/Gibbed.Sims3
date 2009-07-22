@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="BlendGeometry.cs" />
     <Compile Include="BlendUnit.cs" />
+    <Compile Include="CatalogProduct.cs" />
+    <Compile Include="CatalogProductObject.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DatabasePackedFile.cs" />
     <Compile Include="Effects\Camera.cs" />
