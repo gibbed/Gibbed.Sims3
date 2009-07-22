@@ -51,7 +51,7 @@ namespace Gibbed.Sims3.FileFormats
         public ResourceKey Unknown90;
 
         public UInt32 UnknownA0;
-        public UInt32 UnknownA8;
+        public UInt32 PatternSubsort; // A8
         public UInt32 UnknownAC;
         public UInt32 UnknownDC;
         public UInt32 UnknownE0;
@@ -63,11 +63,11 @@ namespace Gibbed.Sims3.FileFormats
 
         public UInt32 UnknownE4;
 
-        public UInt32 UnknownB0;
-        public UInt32 UnknownB4;
-        public UInt64 UnknownB8;
-        public UInt64 UnknownC0;
-        public UInt32 UnknownC8;
+        public UInt32 RoomTypeFlags; // B0
+        public UInt32 BuyCategoryFlags; // B4
+        public UInt64 BuySubCategoryFlags; // B8
+        public UInt64 BuyRoomSubCategoryFlags; // C0
+        public UInt32 BuildCategoryFlags; // C8
 
         public ResourceKey Unknown110;
 
@@ -108,46 +108,46 @@ namespace Gibbed.Sims3.FileFormats
 
         private void FixUnknownC8()
         {
-            if (this.UnknownC8 == 0x00000000 || this.UnknownC8 == 0x80000000)
+            if (this.BuildCategoryFlags == 0x00000000 || this.BuildCategoryFlags == 0x80000000)
             {
                 if ((this.UnknownA0 & 0x08) == 0x08)
                 {
-                    this.UnknownC8 |= 0x02;
+                    this.BuildCategoryFlags |= 0x02;
                 }
 
                 if ((this.UnknownA0 & 0x10) == 0x10)
                 {
-                    this.UnknownC8 |= 0x04;
+                    this.BuildCategoryFlags |= 0x04;
                 }
 
                 if ((this.UnknownA0 & 0x20) == 0x20)
                 {
-                    this.UnknownC8 |= 0x08u;
+                    this.BuildCategoryFlags |= 0x08u;
                 }
 
                 if ((this.UnknownA0 & 0x80) == 0x80)
                 {
-                    this.UnknownC8 |= 0x20;
+                    this.BuildCategoryFlags |= 0x20;
                 }
 
                 if ((this.UnknownA0 & 0x800) == 0x800)
                 {
-                    this.UnknownC8 |= 0x40;
+                    this.BuildCategoryFlags |= 0x40;
                 }
 
                 if ((this.UnknownA0 & 0x1000) == 0x1000)
                 {
-                    this.UnknownC8 |= 0x80;
+                    this.BuildCategoryFlags |= 0x80;
                 }
                 
                 if ((this.UnknownA0 & 0x2000) == 0x2000)
                 {
-                    this.UnknownC8 |= 0x200;
+                    this.BuildCategoryFlags |= 0x200;
                 }
 
                 if ((this.UnknownA0 & 0x4000) == 0x4000)
                 {
-                    this.UnknownC8 |= 0x10;
+                    this.BuildCategoryFlags |= 0x10;
                 }
             }
         }
@@ -195,7 +195,7 @@ namespace Gibbed.Sims3.FileFormats
             this.Unknown90 = keyTable.Keys[input.ReadValueS32()];
 
             this.UnknownA0 = input.ReadValueU32();
-            this.UnknownA8 = input.ReadValueU32();
+            this.PatternSubsort = input.ReadValueU32();
             this.UnknownAC = input.ReadValueU32();
             this.UnknownDC = input.ReadValueU32();
             this.UnknownE0 = input.ReadValueU32();
@@ -217,43 +217,43 @@ namespace Gibbed.Sims3.FileFormats
 
             if (version >= 20)
             {
-                this.UnknownB0 = input.ReadValueU32();
-                this.UnknownB4 = input.ReadValueU32();
-                this.UnknownB8 = input.ReadValueU64();
-                this.UnknownC0 = input.ReadValueU64();
-                this.UnknownC8 = input.ReadValueU32();
+                this.RoomTypeFlags = input.ReadValueU32();
+                this.BuyCategoryFlags = input.ReadValueU32();
+                this.BuySubCategoryFlags = input.ReadValueU64();
+                this.BuyRoomSubCategoryFlags = input.ReadValueU64();
+                this.BuildCategoryFlags = input.ReadValueU32();
             }
             else
             {
-                this.UnknownB0 = input.ReadValueU32();
-                this.UnknownB4 = input.ReadValueU32();
-                this.UnknownB8 = input.ReadValueU64();
-                this.UnknownC8 = input.ReadValueU32();
+                this.RoomTypeFlags = input.ReadValueU32();
+                this.BuyCategoryFlags = input.ReadValueU32();
+                this.BuySubCategoryFlags = input.ReadValueU64();
+                this.BuildCategoryFlags = input.ReadValueU32();
             }
 
-            if (this.UnknownB0 == 0)
+            if (this.RoomTypeFlags == 0)
             {
-                this.UnknownB0 = 0x80000000;
+                this.RoomTypeFlags = 0x80000000;
             }
 
-            if (this.UnknownB4 == 0)
+            if (this.BuyCategoryFlags == 0)
             {
-                this.UnknownB4 = 0x80000000;
+                this.BuyCategoryFlags = 0x80000000;
             }
 
-            if (this.UnknownB8 == 0)
+            if (this.BuySubCategoryFlags == 0)
             {
-                this.UnknownB8 = 0x8000000000000000;
+                this.BuySubCategoryFlags = 0x8000000000000000;
             }
 
-            if (this.UnknownC0 == 0)
+            if (this.BuyRoomSubCategoryFlags == 0)
             {
-                this.UnknownC0 = 0x8000000000000000;
+                this.BuyRoomSubCategoryFlags = 0x8000000000000000;
             }
 
-            if (this.UnknownC8 == 0)
+            if (this.BuildCategoryFlags == 0)
             {
-                this.UnknownC8 = 0x80000000;
+                this.BuildCategoryFlags = 0x80000000;
             }
 
             this.FixUnknownC8();
