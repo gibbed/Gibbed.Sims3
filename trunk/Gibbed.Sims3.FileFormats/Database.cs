@@ -32,6 +32,11 @@ namespace Gibbed.Sims3.FileFormats
         private long BaseOffset;
         private long EndOfDataOffset;
 
+        public ICollection<ResourceKey> Keys
+        {
+            get { return this.Entries.Keys; }
+        }
+
         public ReadOnlyDictionary<ResourceKey, Entry> Entries;
         private Dictionary<ResourceKey, Entry> _Entries;
         private Dictionary<ResourceKey, StreamEntry> OriginalEntries;
