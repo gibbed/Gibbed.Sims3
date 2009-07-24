@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Gibbed.Sims3Game.Commander
+﻿namespace Gibbed.Sims3Game.Commander
 {
     public class Startup
     {
