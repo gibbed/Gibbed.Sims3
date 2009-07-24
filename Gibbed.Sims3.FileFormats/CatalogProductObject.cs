@@ -16,7 +16,7 @@ namespace Gibbed.Sims3.FileFormats
             public UInt32 Unknown;
         }
 
-        public class UnknownClass1
+        public class Preset
         {
             public UInt32 Unknown00;
             public UInt32 Unknown04;
@@ -25,7 +25,7 @@ namespace Gibbed.Sims3.FileFormats
             public UInt32 Unknown10;
             public ResourceKey Unknown18;
 
-            public UnknownClass1(Stream input, KeyTable keyTable)
+            public Preset(Stream input, KeyTable keyTable)
             {
                 this.Deserialize(input, keyTable);
             }
@@ -51,12 +51,12 @@ namespace Gibbed.Sims3.FileFormats
         public ResourceKey Unknown90;
 
         public UInt32 UnknownA0;
-        public UInt32 PatternSubsort; // A8
+        public UInt32 UnknownA8; // A8
         public UInt32 UnknownAC;
         public UInt32 UnknownDC;
         public UInt32 UnknownE0;
 
-        public List<UnknownClass1> UnknownCC;
+        public List<Preset> Presets;
         public bool UnknownF8;
 
         public ResourceKey Unknown100;
@@ -106,7 +106,7 @@ namespace Gibbed.Sims3.FileFormats
 
         public ResourceKey Unknown120;
 
-        private void FixUnknownC8()
+        private void FixBuildCategoryFlags()
         {
             if (this.BuildCategoryFlags == 0x00000000 || this.BuildCategoryFlags == 0x80000000)
             {
@@ -195,17 +195,18 @@ namespace Gibbed.Sims3.FileFormats
             this.Unknown90 = keyTable.Keys[input.ReadValueS32()];
 
             this.UnknownA0 = input.ReadValueU32();
-            this.PatternSubsort = input.ReadValueU32();
+            this.UnknownA8 = input.ReadValueU32();
             this.UnknownAC = input.ReadValueU32();
+
             this.UnknownDC = input.ReadValueU32();
             this.UnknownE0 = input.ReadValueU32();
 
-            this.UnknownCC = new List<UnknownClass1>();
+            this.Presets = new List<Preset>();
             {
                 byte count = input.ReadValueU8();
                 for (byte i = 0; i < count; i++)
                 {
-                    this.UnknownCC.Add(new UnknownClass1(input, keyTable));
+                    this.Presets.Add(new Preset(input, keyTable));
                 }
             }
 
@@ -256,7 +257,7 @@ namespace Gibbed.Sims3.FileFormats
                 this.BuildCategoryFlags = 0x80000000;
             }
 
-            this.FixUnknownC8();
+            this.FixBuildCategoryFlags();
 
             this.Unknown110 = keyTable.Keys[input.ReadValueS32()];
 
