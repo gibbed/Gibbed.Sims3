@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using Sims3.UI;
 using Sims3.SimIFace;
-using Sims3.Gameplay.Core;
 
 namespace Gibbed.Sims3Game.Commander
 {
