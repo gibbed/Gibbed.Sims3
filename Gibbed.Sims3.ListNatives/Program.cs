@@ -11,7 +11,7 @@ namespace Gibbed.Sims3.ListNatives
         public static void Main(string[] args)
         {
             //Consolery.Run(typeof(Program), args);
-            Go();
+            ParseLocales();
         }
     }
 }

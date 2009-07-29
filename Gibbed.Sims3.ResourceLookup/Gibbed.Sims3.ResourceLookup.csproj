@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DFD774FA-A249-4A08-88E5-81B8FD35A581}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gibbed.Sims3.ListNatives</RootNamespace>
-    <AssemblyName>Gibbed.Sims3.ListNatives</AssemblyName>
+    <RootNamespace>Gibbed.Sims3.ResourceLookup</RootNamespace>
+    <AssemblyName>Gibbed.Sims3.ResourceLookup</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,39 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NConsoler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=652faff55808657c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\other\NConsoler.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Executable.cs" />
-    <Compile Include="ParseNatives.cs" />
-    <Compile Include="ParseLocales.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Lookup.cs" />
+    <Compile Include="TypeLookup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tables.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gibbed.Helpers\Gibbed.Helpers.csproj">
       <Project>{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}</Project>
       <Name>Gibbed.Helpers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gibbed.PortableExecutable\Gibbed.PortableExecutable.csproj">
-      <Project>{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}</Project>
-      <Name>Gibbed.PortableExecutable</Name>
+    <ProjectReference Include="..\Gibbed.Sims3.FileFormats\Gibbed.Sims3.FileFormats.csproj">
+      <Project>{214B19EA-BB81-4122-A9CA-F8F08CC13869}</Project>
+      <Name>Gibbed.Sims3.FileFormats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gibbed.Sims3.Helpers\Gibbed.Sims3.Helpers.csproj">
+      <Project>{969C52EF-3C6F-4FFE-8F69-76C05780B506}</Project>
+      <Name>Gibbed.Sims3.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

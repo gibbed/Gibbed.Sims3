@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
 using System.Xml.XPath;
 using Gibbed.Helpers;
 using Gibbed.Sims3.FileFormats;
 using System.Text;
-using Gibbed.RefPack;
 
-namespace Gibbed.Sims3.PackageViewer
+namespace Gibbed.Sims3.ResourceLookup
 {
-    internal static class Lookup
+    public class Lookup
     {
         public static Dictionary<UInt64, string> Files;
         public static Dictionary<uint, string> Groups;
@@ -98,13 +95,13 @@ namespace Gibbed.Sims3.PackageViewer
             XPathDocument document = new XPathDocument(path);
             XPathNavigator navigator = document.CreateNavigator();
             XPathNodeIterator nodes = navigator.Select("/names/name");
-            
+
             while (nodes.MoveNext())
             {
                 uint id;
                 string key = nodes.Current.GetAttribute("id", "");
                 string value = nodes.Current.Value;
-                
+
                 if (key.StartsWith("(hash(") && key.EndsWith("))"))
                 {
                     string tmp = key.Substring(6, key.Length - 8);
@@ -114,7 +111,7 @@ namespace Gibbed.Sims3.PackageViewer
                 {
                     id = key.ParseHex32();
                 }
-                
+
                 Groups[id] = value;
             }
         }
@@ -146,7 +143,7 @@ namespace Gibbed.Sims3.PackageViewer
             XPathDocument document = new XPathDocument(path);
             XPathNavigator navigator = document.CreateNavigator();
             XPathNodeIterator nodes = navigator.Select("/types/type");
-            
+
             while (nodes.MoveNext())
             {
                 XPathNavigator node = nodes.Current;

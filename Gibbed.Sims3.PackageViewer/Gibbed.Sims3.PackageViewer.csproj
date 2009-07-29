@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lookup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -85,7 +84,6 @@
     <Compile Include="SaveAllProgress.designer.cs">
       <DependentUpon>SaveAllProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="TypeLookup.cs" />
     <Compile Include="Viewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +103,10 @@
     <ProjectReference Include="..\Gibbed.Sims3.FileFormats\Gibbed.Sims3.FileFormats.csproj">
       <Project>{214B19EA-BB81-4122-A9CA-F8F08CC13869}</Project>
       <Name>Gibbed.Sims3.FileFormats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gibbed.Sims3.ResourceLookup\Gibbed.Sims3.ResourceLookup.csproj">
+      <Project>{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}</Project>
+      <Name>Gibbed.Sims3.ResourceLookup</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

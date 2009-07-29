@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using Gibbed.Helpers;
 using Gibbed.RefPack;
@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using Gibbed.Sims3.FileFormats;
 using Gibbed.Sims3.ExportableContent;
 using Gibbed.Sims3.Helpers;
+using System.Linq;
 
 namespace Gibbed.Sims3.Test
 {

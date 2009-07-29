@@ -57,6 +57,10 @@
       <Project>{5162A9FB-4DE1-4BBF-B7A2-5E8116AB0D26}</Project>
       <Name>Gibbed.Helpers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Gibbed.PortableExecutable\Gibbed.PortableExecutable.csproj">
+      <Project>{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}</Project>
+      <Name>Gibbed.PortableExecutable</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gibbed.RefPack\Gibbed.RefPack.csproj">
       <Project>{479C9180-E748-4F45-9E12-26E73D7F3442}</Project>
       <Name>Gibbed.RefPack</Name>
