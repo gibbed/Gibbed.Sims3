@@ -1,5 +1,5 @@
 --- SimIFace.il	2009-07-29 01:52:53.095248100 -0700
-+++ SimIFace_patched.il	2009-05-29 08:21:52.832204500 -0700
++++ SimIFace_patched.il	2009-06-02 08:21:52.832204500 -0700
 @@ -67356,10 +67356,16 @@
    .method public hidebysig static bool  DisplayScriptError(class Sims3.SimIFace.IScriptProxy proxy,
                                                             class [mscorlib]System.Exception e) cil managed
