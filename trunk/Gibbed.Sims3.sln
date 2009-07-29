@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ListNatives", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.PortableExecutable", "Gibbed.PortableExecutable\Gibbed.PortableExecutable.csproj", "{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ResourceLookup", "Gibbed.Sims3.ResourceLookup\Gibbed.Sims3.ResourceLookup.csproj", "{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDF58B3-7FCC-4F14-9831-CCDBDCB8C86E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Xml;
 using Gibbed.RefPack;
 using Gibbed.Sims3.FileFormats;
+using Gibbed.Sims3.ResourceLookup;
 
 namespace Gibbed.Sims3.PackageViewer
 {

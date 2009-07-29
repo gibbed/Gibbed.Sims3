@@ -8,6 +8,7 @@ using Gibbed.Helpers;
 using Gibbed.Sims3.FileFormats;
 using System.Text;
 using Gibbed.RefPack;
+using Gibbed.Sims3.ResourceLookup;
 
 namespace Gibbed.Sims3.PackageViewer
 {

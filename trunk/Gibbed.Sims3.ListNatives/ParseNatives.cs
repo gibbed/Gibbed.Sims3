@@ -9,8 +9,8 @@ namespace Gibbed.Sims3.ListNatives
 {
     internal partial class Program
     {
-        [Action(Description = "List natives")]
-        public static void Go()
+        [Action(Description = "Parse natives")]
+        public static void ParseNatives()
         {
             string path = (string)Microsoft.Win32.Registry.GetValue("HKEY_LOCAL_MACHINE\\SOFTWARE\\Sims\\The Sims 3", "Install Dir", null);
 
