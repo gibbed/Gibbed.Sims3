@@ -1,0 +1,22 @@
+--- SimIFace.il	2009-07-29 01:52:53.095248100 -0700
++++ SimIFace_patched.il	2009-05-29 08:21:52.832204500 -0700
+@@ -67356,10 +67356,16 @@
+   .method public hidebysig static bool  DisplayScriptError(class Sims3.SimIFace.IScriptProxy proxy,
+                                                            class [mscorlib]System.Exception e) cil managed
+   {
+-    // Code size       2 (0x2)
+     .maxstack  8
+-    IL_0000:  ldc.i4.0
+-    IL_0001:  ret
++    call       class [mscorlib]System.AppDomain [mscorlib]System.AppDomain::get_CurrentDomain()
++    ldstr      "ScriptErrorWindow"
++    callvirt   instance object [mscorlib]System.AppDomain::GetData(string)
++    castclass  Sims3.SimIFace.IScriptErrorWindow
++    ldarg.0
++    ldarg.1
++    callvirt   instance bool [SimIFace]Sims3.SimIFace.IScriptErrorWindow::DisplayScriptError(class [SimIFace]Sims3.SimIFace.IScriptProxy,
++                                                                                                       class [mscorlib]System.Exception)
++    ret
+   } // end of method ScriptErrorWindow::DisplayScriptError
+ 
+   .method public hidebysig specialname rtspecialname 
