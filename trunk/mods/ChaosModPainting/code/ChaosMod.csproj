@@ -42,6 +42,7 @@
     <Compile Include="Interactions\Animations\PlaySpecificAnimation.cs" />
     <Compile Include="Interactions\Animations\PlaySpecificLoopingAnimation.cs" />
     <Compile Include="Interactions\Debug\DisplayTest.cs" />
+    <Compile Include="Interactions\ExceptionTest.cs" />
     <Compile Include="Interactions\Lots\Deflagrate.cs" />
     <Compile Include="Interactions\Lots\Inundate.cs" />
     <Compile Include="Interactions\Objects\RemoveFlood.cs" />
@@ -59,51 +60,51 @@
   <ItemGroup>
     <Reference Include="Automation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\Automation.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\Automation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\mscorlib.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\mscorlib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ScriptCore, Version=1.0.3457.30648, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\ScriptCore.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\ScriptCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SimIFace, Version=1.0.0.50, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\SimIFace.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\SimIFace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3GameplayObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\Sims3GameplayObjects.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\Sims3GameplayObjects.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3GameplaySystems, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\Sims3GameplaySystems.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\Sims3GameplaySystems.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3Metadata, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\Sims3Metadata.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\Sims3Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\System.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\System.Xml.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\assemblies\1.2.7\UI.dll</HintPath>
+      <HintPath>..\..\assemblies\1.3.24\UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
