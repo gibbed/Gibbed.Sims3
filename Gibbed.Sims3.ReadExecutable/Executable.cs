@@ -6,7 +6,7 @@ using System.Text;
 using Gibbed.Helpers;
 using Gibbed.PortableExecutable;
 
-namespace Gibbed.Sims3.ListNatives
+namespace Gibbed.Sims3.ReadExecutable
 {
     public class Executable
     {

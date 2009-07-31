@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Sassy", "Gibbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.Helpers", "Gibbed.Sims3.Helpers\Gibbed.Sims3.Helpers.csproj", "{969C52EF-3C6F-4FFE-8F69-76C05780B506}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ListNatives", "Gibbed.Sims3.ListNatives\Gibbed.Sims3.ListNatives.csproj", "{DFD774FA-A249-4A08-88E5-81B8FD35A581}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.Sims3.ReadExecutable", "Gibbed.Sims3.ReadExecutable\Gibbed.Sims3.ReadExecutable.csproj", "{DFD774FA-A249-4A08-88E5-81B8FD35A581}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gibbed.PortableExecutable", "Gibbed.PortableExecutable\Gibbed.PortableExecutable.csproj", "{2FDF8D04-3F8C-4A62-B13B-348E7A7F61CA}"
 EndProject
